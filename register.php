@@ -25,11 +25,8 @@ padding: 15px; }
 	</style>
 <body>
 	<div> 
-		Register Here
-		<a href="register.php"><button>Register</button></a>
-
-		Log In Here
-		<a href="login.php"><button>Login</button></a>
+		Header
+		<input type="text" />
 	</div>
 
 </body>
