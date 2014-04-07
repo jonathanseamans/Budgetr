@@ -12,6 +12,7 @@
 		if(! $conn )
 		{
 		  die('Could not connect: ' . mysql_error());
+		  echo $dbpass , $dbuser , $dbhost;
 		}
 		echo 'Connected successfully';
 		$sql = 'CREATE TABLE user( '.
