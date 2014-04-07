@@ -16,8 +16,6 @@
 		echo 'Connected successfully';
 		$sql = 'CREATE TABLE user( '.
 		       'user_id INT NOT NULL AUTO_INCREMENT, '.
-		       'user_fname VARCHAR(20) NOT NULL, '.
-		       'user_lname VARCHAR(20) NOT NULL, '.
 		       'user_email VARCHAR(30) NOT NULL, '.
 		       'join_date    timestamp(14) NOT NULL, '.
 		       'primary key ( user_id ))';
@@ -38,6 +36,6 @@
 
 	 ?>
 <body>
-<a href="mysql.php?setuptable1=true"><button>Setup Tables</button></a>
+<a href="dbsetup.php?setuptable1=true"><button>Setup Tables</button></a>
 </body>
 </html>

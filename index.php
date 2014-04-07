@@ -25,10 +25,10 @@ padding: 15px; }
 	</style>
 <body>
 	<div> 
-		Register Here
+		<p>Register Here</p>
 		<a href="register.php"><button>Register</button></a>
 
-		Log In Here
+		<p>Log In Here</p>
 		<a href="login.php"><button>Login</button></a>
 	</div>
 
