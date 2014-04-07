@@ -1,18 +1,20 @@
 <html>
 
 <?php
-	$dbhost = $_ENV['OPENSHIFT_MYSQL_DB_HOST'] . ':' . $_ENV['OPENSHIFT_MYSQL_DB_PORT'];
-	$dbuser = $_ENV['OPENSHIFT_MYSQL_DB_USERNAME'];
-	$dbpass = $_ENV['OPENSHIFT_MYSQL_DB_PASSWORD'];
+	
 	echo $dbhost ;
 	echo $dbuser ;
 	echo $dbpass ;
 
-	$conn = mysql_connect($dbhost, $dbuser, $dbpass);
 
 
 	function createTables()
 	{
+		$dbhost = $_ENV['OPENSHIFT_MYSQL_DB_HOST'] . ':' . $_ENV['OPENSHIFT_MYSQL_DB_PORT'];
+		$dbuser = $_ENV['OPENSHIFT_MYSQL_DB_USERNAME'];
+		$dbpass = $_ENV['OPENSHIFT_MYSQL_DB_PASSWORD'];
+		$conn = mysql_connect($dbhost, $dbuser, $dbpass);
+
 		if(! $conn )
 		{
 		  die('Could not connect: ' . mysql_error());
