@@ -12,7 +12,7 @@ if (isset($_GET['hello'])) {
 
  ?>
 <body>
-<a class="btn" href="mysql.php?hello=true">Link</a>
+<a href="mysql.php?hello=true"><button>Your First Button</button></a>
 <button onclick="location.href='mysql.php?hello=true"> test </button>
 </body>
 </html>
