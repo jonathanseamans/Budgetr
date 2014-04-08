@@ -26,7 +26,7 @@
      						{	$user_password = test_input($user_password);}
      				}
      		}
-	}
+	
      
 			
 		$dbhost = $_ENV['OPENSHIFT_MYSQL_DB_HOST'] . ':' . $_ENV['OPENSHIFT_MYSQL_DB_PORT'];
@@ -93,12 +93,12 @@ padding: 15px; }
 		</tr>
 		<tr>
 		<td width="100">Enter your Password</td>
-		<td><input name="user_password" type="text" id="user_password"></td>
+		<td><input name="user_password" type="password" id="user_password"></td>
 		<span class="error">* <?php echo $passwordErr;?></span>
 		</tr>
 		<tr>
 		<td width="100">Confirm your Password</td>
-		<td><input name="user_password2" type="text" id="user_password2"></td>
+		<td><input name="user_password2" type="password" id="user_password2"></td>
 		<span class="error">* <?php echo $password2Err;?></span>
 		<span class="error">* <?php echo $password2Err2;?></span>
 		</tr>
