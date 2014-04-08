@@ -18,13 +18,11 @@
 		if(! $conn )
 		{
 		  die('Could not connect: ' . mysql_error());
-		  echo $dbpass , $dbuser , $dbhost;
 		}
 		echo 'Connected successfully';
 		$sql = 'CREATE TABLE user( '.
 		       'user_id INT NOT NULL AUTO_INCREMENT, '.
 		       'user_email VARCHAR(30) NOT NULL, '.
-		       'join_date    timestamp(14) NOT NULL, '.
 		       'primary key ( user_id ))';
 
 		mysql_select_db('test_db');
