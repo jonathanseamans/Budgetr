@@ -44,6 +44,7 @@
 			$dbuser = $_ENV['OPENSHIFT_MYSQL_DB_USERNAME'];
 			$dbpass = $_ENV['OPENSHIFT_MYSQL_DB_PASSWORD'];
 			$conn = mysql_connect($dbhost, $dbuser, $dbpass);
+			mysql_select_db('test_db');
 			
 			if(! $conn )
 			{
@@ -52,16 +53,13 @@
 			///// MySQL Validation 
 			$sql    = "SELECT * FROM user WHERE user_email='$user_email'";
 			$retval = mysql_query($sql, $conn);
-			$message = "$retval";
-			echo $message;
 			
-			if(empty($retval)) {
+			if(! $retval) {
 
 
 				$sql = "INSERT INTO user ".
 				       "(user_id,user_email, user_password) ".
 				       "VALUES('NULL','$user_email','$user_password')";
-				mysql_select_db('test_db');
 				$retval = mysql_query( $sql, $conn );
 				if(! $retval )
 				{
