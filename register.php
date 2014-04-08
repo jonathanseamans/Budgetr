@@ -52,6 +52,8 @@
 			///// MySQL Validation 
 			$sql    = "SELECT * FROM user WHERE user_email='$user_email'";
 			$retval = mysql_query($sql, $conn);
+			$message = "$retval";
+			echo $message;
 			
 			if(empty($retval)) {
 
