@@ -8,8 +8,6 @@
 		$user_password = $_POST['user_password'];
 		$user_password2 = $_POST['user_password2'];
 		// Validation Begin
-		$message = "wro3ng answer";
-			echo "<script type='text/javascript'>alert('$message');</script>";
 		if (empty($user_email))
      		{	
      			$emailErr = "Email is required";
