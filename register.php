@@ -33,6 +33,7 @@
      		{ $user_password2 = test_input($user_password2); }
 
      	if($user_password2 != $user_password) {
+     		$password2Err2 = "Passwords must match"
      		$errorcount = true;
      	}
 		// Validation End
@@ -90,13 +91,16 @@
 	}
 
 	div{
+	font-family: sans-serif;
+	font-size: 24;
+	color: #FFFFFF;
 	background-color: rgba(5,4,2,0.2);
 	width:850px;
 	height: 100%;
 	margin-left:auto;
 	margin-right:auto;
 	padding: 15px; }
-	
+
 </style>
 <body>
 	<div> 
