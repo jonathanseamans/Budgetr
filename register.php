@@ -36,15 +36,15 @@
      		$password2Err2 = "Passwords must match";
      		$errorcount = true;
      	}
+
 		// Validation End
-     	if(!errorcount) {
+     	if($errorcount == false) {
 			
 			$dbhost = $_ENV['OPENSHIFT_MYSQL_DB_HOST'] . ':' . $_ENV['OPENSHIFT_MYSQL_DB_PORT'];
 			$dbuser = $_ENV['OPENSHIFT_MYSQL_DB_USERNAME'];
 			$dbpass = $_ENV['OPENSHIFT_MYSQL_DB_PASSWORD'];
 			$conn = mysql_connect($dbhost, $dbuser, $dbpass);
-			$message = "wro2ng answer";
-			echo "<script type='text/javascript'>alert('$message');</script>";
+			
 			if(! $conn )
 			{
 			  die('Unable to Connect to Server' . mysql_error());
@@ -52,8 +52,7 @@
 			///// MySQL Validation 
 			$sql    = "SELECT * FROM user WHERE user_email='$user_email'";
 			$retval = mysql_query($sql, $conn);
-			$message = "wrong answer";
-			echo "<script type='text/javascript'>alert('$message');</script>";
+			
 			if(empty($retval)) {
 
 

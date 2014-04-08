@@ -1,9 +1,5 @@
 <!doctype html>
 <html lang="en">
-<?php
-$message = "wrong answer";
-echo "<script type='text/javascript'>alert('$message');</script>";
-?>
 <style>
 body { background: url(resources/unnamed.png) ; 
 }
