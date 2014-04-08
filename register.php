@@ -48,18 +48,28 @@
 			{
 			  die('Unable to Connect to Server' . mysql_error());
 			}
+			///// MySQL Validation 
+			$sql    = "SELECT * FROM user WHERE user_email='$user_email'";
+			$retval = mysql_query($sql, $conn);
+			echo $retval;
+			if(empty($retval)) {
 
-			$sql = "INSERT INTO user ".
-			       "(user_id,user_email, user_password) ".
-			       "VALUES('NULL','$user_email','$user_password')";
-			mysql_select_db('test_db');
-			$retval = mysql_query( $sql, $conn );
-			if(! $retval )
-			{
-			  die('Could not enter data: ' . mysql_error());
+
+				$sql = "INSERT INTO user ".
+				       "(user_id,user_email, user_password) ".
+				       "VALUES('NULL','$user_email','$user_password')";
+				mysql_select_db('test_db');
+				$retval = mysql_query( $sql, $conn );
+				if(! $retval )
+				{
+				  die('Could not enter data: ' . mysql_error());
+				}
+				echo "Account Registered successfully\n";
+				mysql_close($conn);
 			}
-			echo "Account Registered successfully\n";
-			mysql_close($conn);
+			else {
+				echo "Email Address is already in Use";
+			}
 		}
 	}
 	function test_input($data)
