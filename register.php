@@ -1,35 +1,35 @@
 <!doctype html>
 <html lang="en">
 <?php
-	// if(isset($_POST['add']))
-		// if($user_password2 != $user_password) {
-			// echo "Password not the same in both fields";
-		// }		
-	// 	$dbhost = $_ENV['OPENSHIFT_MYSQL_DB_HOST'] . ':' . $_ENV['OPENSHIFT_MYSQL_DB_PORT'];
-	// 	$dbuser = $_ENV['OPENSHIFT_MYSQL_DB_USERNAME'];
-	// 	$dbpass = $_ENV['OPENSHIFT_MYSQL_DB_PASSWORD'];
-	// 	$conn = mysql_connect($dbhost, $dbuser, $dbpass);
+	if(isset($_POST['add'])) {
+		if($user_password2 != $user_password) {
+			echo "Password not the same in both fields";
+		}		
+		$dbhost = $_ENV['OPENSHIFT_MYSQL_DB_HOST'] . ':' . $_ENV['OPENSHIFT_MYSQL_DB_PORT'];
+		$dbuser = $_ENV['OPENSHIFT_MYSQL_DB_USERNAME'];
+		$dbpass = $_ENV['OPENSHIFT_MYSQL_DB_PASSWORD'];
+		$conn = mysql_connect($dbhost, $dbuser, $dbpass);
 	
-	// 	if(! $conn )
-	// 	{
-	// 	  die('Unable to Connect to Server' . mysql_error());
-	// 	}
+		if(! $conn )
+		{
+		  die('Unable to Connect to Server' . mysql_error());
+		}
 
-	// 	$user_email = $_POST['user_email'];
-	// 	$user_password = $_POST['user_password'];
+		$user_email = $_POST['user_email'];
+		$user_password = $_POST['user_password'];
 
-	// 	// $sql = "INSERT INTO user ".
-	// 	//        "(user_id,user_id,user_email, user_password) ".
-	// 	//        "VALUES('NULL','$user_id','$user_email',$user_password)";
-	// 	mysql_select_db('test_db');
-	// 	$retval = mysql_query( $sql, $conn );
-	// 	if(! $retval )
-	// 	{
-	// 	  die('Could not enter data: ' . mysql_error());
-	// 	}
-	// 	echo "Entered data successfully\n";
-	// 	mysql_close($conn);
-	// }
+		$sql = "INSERT INTO user ".
+		       "(user_id,user_id,user_email, user_password) ".
+		       "VALUES('NULL','$user_id','$user_email',$user_password)";
+		mysql_select_db('test_db');
+		$retval = mysql_query( $sql, $conn );
+		if(! $retval )
+		{
+		  die('Could not enter data: ' . mysql_error());
+		}
+		echo "Entered data successfully\n";
+		mysql_close($conn);
+	}
 ?>
 <style>
 body { background: url(resources/unnamed.png) ; 
