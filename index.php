@@ -16,7 +16,7 @@ input
     font-size: 20;
 }
 div{
-background-color: rgba(5,4,2,0.1);
+background-color: rgba(5,4,2,0.2);
 width:850px;
 height: 100%;
 margin-left:auto;
