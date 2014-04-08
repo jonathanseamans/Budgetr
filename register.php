@@ -33,7 +33,7 @@
      		{ $user_password2 = test_input($user_password2); }
 
      	if($user_password2 != $user_password) {
-     		$password2Err2 = "Passwords must match"
+     		$password2Err2 = "Passwords must match";
      		$errorcount = true;
      	}
 		// Validation End
