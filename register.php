@@ -8,6 +8,8 @@
 		$user_password = $_POST['user_password'];
 		$user_password2 = $_POST['user_password2'];
 		// Validation Begin
+		$message = "wro3ng answer";
+			echo "<script type='text/javascript'>alert('$message');</script>";
 		if (empty($user_email))
      		{	
      			$emailErr = "Email is required";
@@ -43,7 +45,8 @@
 			$dbuser = $_ENV['OPENSHIFT_MYSQL_DB_USERNAME'];
 			$dbpass = $_ENV['OPENSHIFT_MYSQL_DB_PASSWORD'];
 			$conn = mysql_connect($dbhost, $dbuser, $dbpass);
-		
+			$message = "wro2ng answer";
+			echo "<script type='text/javascript'>alert('$message');</script>";
 			if(! $conn )
 			{
 			  die('Unable to Connect to Server' . mysql_error());
@@ -76,9 +79,9 @@
 	function test_input($data)
 	{
      	$data = trim($data);
-    	 $data = stripslashes($data);
-    	 $data = htmlspecialchars($data);
-    	 return $data;
+    	$data = stripslashes($data);
+    	$data = htmlspecialchars($data);
+    	return $data;
 	}
 ?>
 <style>
