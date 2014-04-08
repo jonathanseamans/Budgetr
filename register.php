@@ -3,7 +3,7 @@
 <?php
 	if(isset($_POST['add']))
 		if($user_password2 != $user_password) {
-			echo "Password not the same in both fields";
+			// echo "Password not the same in both fields";
 		}		
 		$dbhost = $_ENV['OPENSHIFT_MYSQL_DB_HOST'] . ':' . $_ENV['OPENSHIFT_MYSQL_DB_PORT'];
 		$dbuser = $_ENV['OPENSHIFT_MYSQL_DB_USERNAME'];
