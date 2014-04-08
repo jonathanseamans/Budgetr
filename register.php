@@ -18,9 +18,9 @@
 		$user_email = $_POST['user_email'];
 		$user_password = $_POST['user_password'];
 
-		$sql = "INSERT INTO user ".
-		       "(user_id,user_id,user_email, user_password) ".
-		       "VALUES('NULL','$user_id','$user_email',$user_password)";
+		// $sql = "INSERT INTO user ".
+		//        "(user_id,user_id,user_email, user_password) ".
+		//        "VALUES('NULL','$user_id','$user_email',$user_password)";
 		mysql_select_db('test_db');
 		$retval = mysql_query( $sql, $conn );
 		if(! $retval )
