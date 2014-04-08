@@ -14,18 +14,18 @@
 
      	if (empty($user_password))
      		{	$passwordErr = "Password is required";}
-   		else
-     		{	
-     			if (empty($user_password2))
-     				{	$password2Err = "Password is required";}
-   				else
-     				{	
-     					if ($user_password != $user_password2))
-     						{	$paswordErr2 = "Passwords must match";}
-   						else
-     						{	$user_password = test_input($user_password);}
-     				}
-     		}
+   		// else
+     // 		{	
+     // 			if (empty($user_password2))
+     // 				{	$password2Err = "Password is required";}
+   		// 		else
+     // 				{	
+     // 					if ($user_password != $user_password2))
+     // 						{	$paswordErr2 = "Passwords must match";}
+   		// 				else
+     // 						{	$user_password = test_input($user_password);}
+     // 				}
+     // 		}
 	
      
 			
