@@ -24,11 +24,23 @@ margin-right:auto;
 padding: 15px; }
 	</style>
 <body>
+	<body>
 	<div> 
-		<p>Log In</p>
-		<br />
-		<br />
+		<p> Log In </p>
+		<form method="post" action="<?php $_PHP_SELF ?>">
+		<table width="400" border="0" cellspacing="1" cellpadding="2">
+		<tr>
+		<td width="100">Email Address</td>
+		<td><input name="user_email" type="text" id="user_email"></td>
+		<span class="error">* <?php echo $emailErr;?></span>
+		</tr>
+		<tr>
+		<td width="100">Password</td>
+		<td><input name="user_password" type="password" id="user_password"></td>
+		<span class="error">* <?php echo $passwordErr;?></span>
+		</tr>
+		</table>
+		</form>
 	</div>
-
 </body>
 </html>
