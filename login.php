@@ -41,10 +41,11 @@
 			$result = mysql_query($sql, $conn);
 			// count rows to make sure its only 1
 			$count=mysql_num_rows($result);
-			// mysql_close($conn);
+
 			if($count==1){
-				session_register("$user_email");
-				session_register("$user_password"); 
+				$_SESSION['loggedIn'] = true; 
+   				$_SESSION['user'] = $user_email;
+    			$_SESSION['pass'] = $user_password; 
 				header("location:userhome.php");
 			}
 			else {
@@ -55,9 +56,10 @@
 
 	function test_input($data)
 		{
-	    	$data = stripslashes($data);
-	    	$data = mysql_real_escape_string($data);
-	    	return $data;
+	    	$data = trim($data);
+  			$data = stripslashes($data);
+  			$data = htmlspecialchars($data);
+ 			return $data;
 		}
 ?>
 <style>

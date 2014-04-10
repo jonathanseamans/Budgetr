@@ -1,5 +1,11 @@
 <!doctype html>
 <html lang="en">
+<?php
+	session_start();
+	if($_SESSION['loggedIn'] == false) {
+		header("location:index.php");
+	}
+?>
 <style>
 body { background: url(resources/unnamed.png) ; 
 }
@@ -23,7 +29,7 @@ padding: 15px; }
 	</style>
 <body>
 	<div> 
-		<p>Welcome to Home Page</p>
+		<p>Welcome $_SESSION['user']</p>
 		<br />
 		<br />
 	</div>

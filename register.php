@@ -74,11 +74,12 @@
 		}
 	}
 	function test_input($data)
-	{
-    	$data = stripslashes($data);
-    	$data = mysql_real_escape_string($data);
-    	return $data;
-	}
+		{
+	    	$data = trim($data);
+  			$data = stripslashes($data);
+  			$data = htmlspecialchars($data);
+ 			return $data;
+		}
 ?>
 <style>
 	.error {color: #FF0000;}
