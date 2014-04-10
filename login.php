@@ -1,7 +1,10 @@
 <!doctype html>
 <html lang="en">
 <?php
-		
+	session_start();
+	if($_SESSION['loggedIn'] == true) {
+		header("location:userhome.php");
+	}	
 	if(isset($_POST['add'])) {
 		$errorcount = false;
 		$user_email = $_POST['user_email'];

@@ -9,7 +9,9 @@
 <style>
 body { background: url(resources/unnamed.png) ; 
 }
-
+p{
+	color: rgb(255,255,255);
+}
 input
 {
   -moz-border-radius: 15px;
@@ -29,10 +31,7 @@ padding: 15px; }
 	</style>
 <body>
 	<div> 
-		<p>Welcome $_SESSION['user']</p>
-		<br />
-		<br />
+		<p><?php echo "Welcome ". $_SESSION['user'];?></p>
 	</div>
-
 </body>
 </html>
