@@ -75,9 +75,8 @@
 	}
 	function test_input($data)
 	{
-     	$data = trim($data);
     	$data = stripslashes($data);
-    	$data = htmlspecialchars($data);
+    	$data = mysql_real_escape_string($data);
     	return $data;
 	}
 ?>
@@ -85,10 +84,6 @@
 	.error {color: #FF0000;}
 
 	body { background: url(resources/unnamed.png) ; 
-	}
-
-	#hea1 {
-		background-color:white;
 	}
 
 	input

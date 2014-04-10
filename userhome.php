@@ -3,9 +3,7 @@
 <style>
 body { background: url(resources/unnamed.png) ; 
 }
-#hea1 {
-	background-color:white;
-}
+
 input
 {
   -moz-border-radius: 15px;
@@ -25,7 +23,7 @@ padding: 15px; }
 	</style>
 <body>
 	<div> 
-		<p>Log In</p>
+		<p>Welcome to Home Page</p>
 		<br />
 		<br />
 	</div>
