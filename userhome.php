@@ -30,7 +30,7 @@ margin-right:auto;
 padding: 15px; }
 	</style>
 <head>
-	<a href="login.php"><button>Logout</button></a>
+	<a href="logout.php"><button>Logout</button></a>
 </head>	
 <body>
 	<div> 
