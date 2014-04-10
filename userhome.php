@@ -29,6 +29,9 @@ margin-left:auto;
 margin-right:auto;
 padding: 15px; }
 	</style>
+<head>
+	<a href="login.php"><button>Logout</button></a>
+</head>	
 <body>
 	<div> 
 		<p><?php echo "Welcome ". $_SESSION['user'];?></p>
