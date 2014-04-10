@@ -23,14 +23,6 @@
    		else
      		{	$user_password = test_input($user_password);}
 
-     	if(empty($user_password2))
-     	{
-     		$password2Err = "Password is required";
-     		$errorcount = true;
-     	}
-     	else
-     		{ $user_password2 = test_input($user_password2); }
-
      	// Validation End
      	if($errorcount == false) {
 			
@@ -49,7 +41,7 @@
 			$result = mysql_query($sql, $conn);
 			// count rows to make sure its only 1
 			$count=mysql_num_rows($result);
-			mysql_close($conn);
+			// mysql_close($conn);
 			if($count==1){
 				session_register("$user_email");
 				session_register("$user_password"); 
@@ -107,7 +99,7 @@ padding: 15px; }
 		<tr>
 		<td width="100"> </td>
 		<td>
-		<input name="add" type="submit" id="add" value="Register Account">
+		<input name="add" type="submit" id="add" value="Login">
 		</td>
 		</tr>
 		</table>
