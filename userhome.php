@@ -35,6 +35,8 @@ padding: 15px; }
 <body>
 	<div> 
 		<p><?php echo "Welcome ". $_SESSION['user'];?></p>
+		<br />
+		<p><?php include("budget.php"); ?></p>
 	</div>
 </body>
 </html>
