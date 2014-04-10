@@ -43,6 +43,7 @@
 			$count=mysql_num_rows($result);
 
 			if($count==1){
+				session_start();
 				$_SESSION['loggedIn'] = true; 
    				$_SESSION['user'] = $user_email;
     			$_SESSION['pass'] = $user_password; 
