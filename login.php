@@ -37,7 +37,7 @@
 			  die('Unable to Connect to Server' . mysql_error());
 			}
 			///// MySQL Validation 
-			$sql    = "SELECT * FROM user WHERE user_email='$user_email' AND user_password ='$user_password'";
+			$sql = "SELECT * FROM user WHERE user_email='$user_email' AND user_password ='$user_password'";
 			$result = mysql_query($sql, $conn);
 			// count rows to make sure its only 1
 			$count=mysql_num_rows($result);
