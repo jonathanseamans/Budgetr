@@ -29,7 +29,7 @@
 		    	echo "Load Title and Rest";
 		    }
 		    else {
-		    	echo "Call Wizard";
+		    	include 'wizard1.php';
 		    }
 	?>
 </p>

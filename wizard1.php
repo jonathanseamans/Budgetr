@@ -2,7 +2,7 @@
 	<body>
 		<p>Enter your Title Name: <input type="text" name="Budget Title" value="" id="title"></p>
 		<br />
-		<button onclick="title_name()">Save</button>
+		<button onclick="title_submit()">Save</button>
 		<div id='titleresponse'/>
 	</body>
 </html>
