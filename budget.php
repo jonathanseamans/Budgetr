@@ -5,6 +5,9 @@
 		ob_start();
 
 		echo $loadmessage;
+	?>
+	<link rel="stylesheet" href="css/loading.css" type="text/css">
+	<?php
 		ob_flush();
 		sleep(5);
 	?>
