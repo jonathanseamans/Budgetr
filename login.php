@@ -29,16 +29,8 @@
      	// Validation End
      	if($errorcount == false) {
 			
-			$dbhost = $_ENV['OPENSHIFT_MYSQL_DB_HOST'] . ':' . $_ENV['OPENSHIFT_MYSQL_DB_PORT'];
-			$dbuser = $_ENV['OPENSHIFT_MYSQL_DB_USERNAME'];
-			$dbpass = $_ENV['OPENSHIFT_MYSQL_DB_PASSWORD'];
-			$conn = mysql_connect($dbhost, $dbuser, $dbpass);
-			mysql_select_db('test_db');
+			include 'mysql.php';
 			
-			if(! $conn )
-			{
-			  die('Unable to Connect to Server' . mysql_error());
-			}
 			///// MySQL Validation 
 			$sql = "SELECT * FROM user WHERE user_email='$user_email' AND user_password ='$user_password'";
 			$result = mysql_query($sql, $conn);
@@ -46,10 +38,12 @@
 			$count=mysql_num_rows($result);
 
 			if($count==1){
+				$user_id = mysql_result($result, 0,'user_id');
 				session_start();
 				$_SESSION['loggedIn'] = true; 
    				$_SESSION['user'] = $user_email;
-    			$_SESSION['pass'] = $user_password; 
+    			$_SESSION['pass'] = $user_password;
+    			$_SESSION['userid'] = $user_id;  
 				header("location:userhome.php");
 			}
 			else {

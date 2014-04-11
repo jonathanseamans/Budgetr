@@ -40,16 +40,8 @@
 		// Validation End
      	if($errorcount == false) {
 			
-			$dbhost = $_ENV['OPENSHIFT_MYSQL_DB_HOST'] . ':' . $_ENV['OPENSHIFT_MYSQL_DB_PORT'];
-			$dbuser = $_ENV['OPENSHIFT_MYSQL_DB_USERNAME'];
-			$dbpass = $_ENV['OPENSHIFT_MYSQL_DB_PASSWORD'];
-			$conn = mysql_connect($dbhost, $dbuser, $dbpass);
-			mysql_select_db('test_db');
+			include 'mysql.php';
 			
-			if(! $conn )
-			{
-			  die('Unable to Connect to Server' . mysql_error());
-			}
 			///// MySQL Validation 
 			$sql    = "SELECT * FROM user WHERE user_email='$user_email'";
 			$retval = mysql_query($sql, $conn);
