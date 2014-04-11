@@ -1,5 +1,5 @@
 <html>
-	<link rel="stylesheet" href="/css/loading.css" type="text/css">
+	<link rel="stylesheet" href="$OPENSHIFT_REPO_DIR/php/css/loading.css" type="text/css">
 	<?php
 		$loadmessage = "Loading Your Budget Please Wait";
 		ob_start();
