@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en">
-<link rel="stylesheet" href="$_ENV['OPENSHIFT_REPO_DIR']/php/css/main.css" type="text/css">
+<link rel="stylesheet" href="<?php $_ENV['OPENSHIFT_REPO_DIR'] ?>/php/css/main.css" type="text/css">
 <body>
 	<div> 
 		<p>Register Here</p>
