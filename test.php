@@ -24,6 +24,8 @@ li {list-style: none; margin:5px 0 5px 0; color:#FF0000}
               </div>
  </div>
 </form>
+<br />
+<div id="suggestion"></div>
 <script>
 function book_suggestion()
 {
@@ -51,7 +53,5 @@ var data = "book_name=" + book;
 	}
 }
 </script>
-<br />
-<div id="suggestion"></div>
 </body>
 </html>
