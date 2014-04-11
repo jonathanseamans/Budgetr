@@ -3,9 +3,7 @@
 <style>
 body { background: url(resources/unnamed.png) ; 
 }
-#hea1 {
-	background-color:white;
-}
+
 input
 {
   -moz-border-radius: 15px;
