@@ -23,7 +23,7 @@ xmlhttp.onreadystatechange=function()
     document.getElementById("txtHint").innerHTML=xmlhttp.responseText;
     }
   }
-xmlhttp.open("GET","getuser.php?q="+str,true);
+xmlhttp.open("GET","test2.php?q="+str,true);
 xmlhttp.send();
 }
 </script>
