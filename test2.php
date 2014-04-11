@@ -3,7 +3,7 @@ define('INCLUDE_CHECK',true);
 include 'mysql.php';
 
 $userID=$_GET["userID"];
-$sql="SELECT * FROM budget WHERE uid = '$userID'";
+$sql="SELECT * FROM budget WHERE uid = '2'";
 $result = mysql_query($sql);
 
 $returned_rows = mysql_num_rows ($result);
@@ -13,9 +13,7 @@ $returned_rows = mysql_num_rows ($result);
     }
     else {
         while($row = mysql_fetch_array($result)) {
-        echo "<div class='column'>";
-        echo '<label>Name:</label>' . $row['UDT'];
-        echo '</div>';
+        $row['UDT'];
         }
      }
 
