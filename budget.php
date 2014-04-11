@@ -1,11 +1,19 @@
 <html>
-	<?php echo "Loading Your Budget Please Wait"; ?>
 	<link rel="stylesheet" href="css/loading.css" type="text/css">
-	<div class="ball"></div>
-	<?php sleep(5); ?>
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js">
-	</script>
+	<?php
+		$loadmessage = "Loading Your Budget Please Wait";
+		ob_start();
+
+		echo $loadmessage;
+		ob_flush();
+		sleep(5);
+	?>
 	<script>
 		document.getElementsByTagName('link')[0].disabled = true;
 	</script>
+	<?php
+		ob_flush();
+		$loadmessage = '';
+		echo $loadmessage;
+	?>
 </html>
