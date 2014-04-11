@@ -1,22 +1,46 @@
-<?
-			$dbhost = $_ENV['OPENSHIFT_MYSQL_DB_HOST'] . ':' . $_ENV['OPENSHIFT_MYSQL_DB_PORT'];
-			$dbuser = $_ENV['OPENSHIFT_MYSQL_DB_USERNAME'];
-			$dbpass = $_ENV['OPENSHIFT_MYSQL_DB_PASSWORD'];
-			$conn = mysql_connect($dbhost, $dbuser, $dbpass);
-			mysql_select_db('test_db');
-			
-			if(! $conn )
-			{
-			  die('Unable to Connect to Server' . mysql_error());
-			}
-			///// MySQL Validation 
-			$sql = "SELECT * FROM user WHERE user_email='test' AND user_password ='test'";
-			$result = mysql_query($sql, $conn);
-			// count rows to make sure its only 1
-			$count=mysql_num_rows($result);
+<html>
+<head>
+<script>
+function showUser(str)
+{
+if (str=="")
+  {
+  document.getElementById("txtHint").innerHTML="";
+  return;
+  } 
+if (window.XMLHttpRequest)
+  {// code for IE7+, Firefox, Chrome, Opera, Safari
+  xmlhttp=new XMLHttpRequest();
+  }
+else
+  {// code for IE6, IE5
+  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+xmlhttp.onreadystatechange=function()
+  {
+  if (xmlhttp.readyState==4 && xmlhttp.status==200)
+    {
+    document.getElementById("txtHint").innerHTML=xmlhttp.responseText;
+    }
+  }
+xmlhttp.open("GET","getuser.php?q="+str,true);
+xmlhttp.send();
+}
+</script>
+</head>
+<body>
 
-			if($count==1){
-				$user_id = mysql_result($result, 0,'user_id');
-				echo $user_id;
-			}
-			?>
+<form>
+<select name="users" onchange="showUser(this.value)">
+<option value="">Select a person:</option>
+<option value="1">Peter Griffin</option>
+<option value="2">Lois Griffin</option>
+<option value="3">Glenn Quagmire</option>
+<option value="4">Joseph Swanson</option>
+</select>
+</form>
+<br>
+<div id="txtHint"><b>Person info will be listed here.</b></div>
+
+</body>
+</html>
