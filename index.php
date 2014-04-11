@@ -1,8 +1,6 @@
 <!doctype html>
 <html lang="en">
-<style>
-	<?php include 'css/main.css'; ?>
-</style>
+<style><?php include 'css/main.css'; ?></style>
 <body>
 	<div> 
 		<p>Register Here</p>

@@ -81,34 +81,7 @@
  			return $data;
 		}
 ?>
-<style>
-	.error {color: #FF0000;}
-
-	body { background: url(resources/unnamed.png) ; 
-	}
-
-	input
-	{
-	  -moz-border-radius: 15px;
-	 border-radius: 15px;
-	    border:solid 4px black; 
-	    padding:5px;
-	    font-family: sans-serif;
-	    font-size: 20;
-	}
-
-	div{
-	font-family: sans-serif;
-	font-size: 24;
-	color: #FFFFFF;
-	background-color: rgba(5,4,2,0.2);
-	width:850px;
-	height: 100%;
-	margin-left:auto;
-	margin-right:auto;
-	padding: 15px; }
-
-</style>
+<style><?php include 'css/main.css'; ?></style>
 <body>
 	<div> 
 		<form method="post" action="<?php $_PHP_SELF ?>">
