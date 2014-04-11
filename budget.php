@@ -11,9 +11,9 @@
 		ob_flush();
 		sleep(5);
 	?>
-	<script>
-		document.getElementsByTagName('link')[0].disabled = true;
-	</script>
+<!--	<script>-->
+<!--		document.getElementsByTagName('link')[0].disabled = true;-->
+<!--	</script>-->
 	<?php
 		ob_flush();
 		$loadmessage = '';
