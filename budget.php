@@ -1,13 +1,9 @@
 <html>
 <?php
 	session_start();
-	
+
 	include 'mysql.php';
 			
-	if(! $conn )
-	{
-	  die('Unable to Connect to Server' . mysql_error());
-	} 
 	$sql = "SELECT * FROM budget WHERE uid='$_SESSION['userid']'";
 	$result = mysql_query($sql, $conn);
 	$count=mysql_num_rows($result);
@@ -23,16 +19,22 @@
 	  	}
     }
 
-    if($exist == true) {
-    	echo "Load Title and Rest";
-    }
-    else {
-    	echo "Call Wizard";
-    }
-
-	
-
-
+    // if($exist == true) {
+    // 	echo "Load Title and Rest";
+    // }
+    // else {
+    // 	echo "Call Wizard";
+    // }
 ?>
 <style><?php include 'css/main.css'; ?></style>
+<p>
+	<?php 
+		if($exist == true) {
+		    	echo "Load Title and Rest";
+		    }
+		    else {
+		    	echo "Call Wizard";
+		    }
+	?>
+</p>
 </html>
