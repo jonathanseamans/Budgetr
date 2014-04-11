@@ -41,7 +41,7 @@
      	if($errorcount == false) {
 			
 			include 'mysql.php';
-			
+
 			///// MySQL Validation 
 			$sql    = "SELECT * FROM user WHERE user_email='$user_email'";
 			$retval = mysql_query($sql, $conn);
@@ -58,7 +58,6 @@
 				  die('Could not enter data: ' . mysql_error());
 				}
 				echo "Account Registered successfully\n";
-				mysql_close($conn);
 			}
 			else {
 				echo "Email Address is already in Use";
