@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <style>
-	<?php include 'CSS/main.css'; ?>
+	<?php include 'css/main.css'; ?>
 </style>
 <body>
 	<div> 
