@@ -2,7 +2,7 @@
 $q = intval($_GET['q']);
 
 include 'mysql.php';
-$sql="SELECT * FROM budget WHERE uid = '".$q."'";
+$sql="SELECT * FROM budget WHERE uid = '$q'";
 
 $result = mysql_query($con,$sql);
 
@@ -18,8 +18,8 @@ echo "<table border='1'>
 while($row = mysql_fetch_array($result))
   {
   echo "<tr>";
-  echo "<td>" . $row['FirstName'] . "</td>";
-  echo "<td>" . $row['LastName'] . "</td>";
+  echo "<td>" . $row['UDT'] . "</td>";
+  echo "<td>" . $row['UDV'] . "</td>";
   echo "<td>" . $row['Age'] . "</td>";
   echo "<td>" . $row['Hometown'] . "</td>";
   echo "<td>" . $row['Job'] . "</td>";
