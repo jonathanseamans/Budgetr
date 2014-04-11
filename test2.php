@@ -1,10 +1,23 @@
 <?php
+define('INCLUDE_CHECK',true);
 include 'mysql.php';
-$book_name = $_POST['book_name'];
-$sql = "select * from budget where uid LIKE '$book_name%'";
+
+$userID=$_GET["userID"];
+$sql="SELECT * FROM budget WHERE uid = '".$userID."'";
 $result = mysql_query($sql);
-while($row=mysql_fetch_array($result))
-{
-echo "<p>".$row['UDT']."</p>";
-}
+
+$returned_rows = mysql_num_rows ($result);
+
+    if ($returned_rows == 0){
+        echo '-- No results found --';
+    }
+    else {
+        while($row = mysql_fetch_array($result)) {
+        echo "<div class='column'>";
+        echo '<label>Name:</label>' . $row['UDT'] . '';
+        echo '</div>';
+        }
+     }
+
+mysql_close($con);
 ?>
