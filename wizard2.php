@@ -1,5 +1,6 @@
 <?php
 include 'mysql.php';
+session_start();
 $title_name = $_POST['title_name'];
 $uuid = $_SESSION['userid'];
 // type 2 == title
