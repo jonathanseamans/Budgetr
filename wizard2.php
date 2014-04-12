@@ -1,5 +1,4 @@
 <?php
-//provide your hostname, username and dbname
 include 'mysql.php';
 $title_name = $_POST['title_name'];
 // type 2 == title
