@@ -31,5 +31,7 @@ var data = "title_name=" + title;
       }
      }
 	}
+	sleep(4);
+	document.location.reload(true);
 }
 </script>
