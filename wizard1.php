@@ -1,23 +1,34 @@
-<html> 
-	<body>
-		<p>Enter your Title Name: <input type="text" name="Budget Title" value="" id="title"></p>
-		<br />
-		<button onclick="submit()">Save</button>
-		<div id='titleresponse'>
-			<?php
-				function submit(){
-				include 'mysql.php';
-				session_start();
-				$title_name = $_POST['title_name'];
-				$uuid = $_SESSION['userid'];
-				// type 2 == title
-				$sql = "INSERT INTO budget (uid,bid,type,UDT) VALUES ('$uuid','1','2','$title_name')";
-				mysql_query($sql);
-				echo "Title Saved";
-//				sleep(2);
-//				header("refresh:");
-				}
-			?>
-		</div>
-	</body>
+<html>
+<body>
+<p>Enter your Title Name: <input type="text" name="Budget Title" value="" id="title"></p>
+<br />
+<button onclick="title_submit()">Save</button>
+<div id='titleresponse'/>
+</body>
 </html>
+<script>
+	function title_submit()
+	{
+		var title = document.getElementById("title").value;
+		var xhr;
+		if (window.XMLHttpRequest) { // Mozilla, Safari, ...
+			xhr = new XMLHttpRequest();
+		} else if (window.ActiveXObject) { // IE 8 and older
+			xhr = new ActiveXObject("Microsoft.XMLHTTP");
+		}
+		var data = "title_name=" + title;
+		xhr.open("POST", "wizard2.php", true);
+		xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+		xhr.send(data);
+		xhr.onreadystatechange = display_data;
+		function display_data() {
+			if (xhr.readyState == 4) {
+				if (xhr.status == 200) {
+					document.getElementById("titleresponse").innerHTML = xhr.responseText;
+				} else {
+					alert('There was a problem with the request.');
+				}
+			}
+		}
+	}
+</script>

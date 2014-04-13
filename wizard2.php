@@ -7,4 +7,6 @@ $uuid = $_SESSION['userid'];
 $sql = "INSERT INTO budget (uid,bid,type,UDT) VALUES ('$uuid','1','2','$title_name')";
 mysql_query($sql);
 echo "Title Saved";
+sleep(2);
+header("Refresh:0");
 ?>
