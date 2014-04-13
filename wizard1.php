@@ -15,7 +15,7 @@
 				mysql_query($sql);
 				echo "Title Saved";
 				sleep(2);
-				header("location:userhome.php");
+				header("refresh:");
 				}
 			?>
 		</div>
