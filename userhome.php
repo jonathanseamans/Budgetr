@@ -1,19 +1,19 @@
-<!doctype html>
-<html lang="en">
+<html>
 <?php
-	session_start();
-	if($_SESSION['loggedIn'] == false) {
-		header("location:index.php");
-	}
+session_start();
+if($_SESSION['loggedIn'] == false) {
+	header("location:index.php");
+}
 ?>
-<style><?php include 'css/main.css'; ?></style>
+	<span id="logo">BUDGETR</span> <span id="zheader">
+		<?php echo "You are logged in as ". $_SESSION['user']." ";?><a href="logout
+		.php"><button>Logout</button></a>
+	</span>
 <head>
-	<a href="logout.php"><button>Logout</button></a>
-</head>	
+<style><?php include 'css/main.css'; ?></style>
+</head>
 <body>
-	<div> 
-		<p><?php echo "Welcome ". $_SESSION['user'];?></p>
-		<br />
+	<div>
 		<p><?php include("budget.php"); ?></p>
 	</div>
 </body>

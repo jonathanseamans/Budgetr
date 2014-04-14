@@ -1,8 +1,6 @@
 <html>
 <?php
-	session_start();
-	echo "file loaded successfully";
-	include 'mysql.php';
+	include 'mysqllocal.php';
 	$var = $_SESSION['userid'];		
 	$sql = "SELECT * FROM budget WHERE uid='$var'";
 	$result = mysql_query($sql, $conn);
@@ -26,7 +24,7 @@
 <p>
 	<?php 
 		if($exist == true) {
-		    	echo "Load Title and Rest";
+		    	include 'category_display.php';
 		    }
 		    else {
 		    	include 'wizard1.php';

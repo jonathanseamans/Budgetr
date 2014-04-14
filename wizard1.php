@@ -25,6 +25,7 @@
 			if (xhr.readyState == 4) {
 				if (xhr.status == 200) {
 					document.getElementById("titleresponse").innerHTML = xhr.responseText;
+					location.reload();
 				} else {
 					alert('There was a problem with the request.');
 				}
