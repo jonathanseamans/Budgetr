@@ -1,6 +1,6 @@
 <html>
 <?php
-	include 'mysqllocal.php';
+	include 'mysql.php';
 	$var = $_SESSION['userid'];		
 	$sql = "SELECT * FROM budget WHERE uid='$var'";
 	$result = mysql_query($sql, $conn);
