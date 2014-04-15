@@ -2,17 +2,15 @@
 <body>
 <p>Enter your the name of your budget: <input type="text" name="Budget Title" value="" id="title"></p>
 <br>
-<p>
+<p> Set the starting date for your budget
 <?php
 	  require_once('calendar/tc_calendar.php');
 	  $myCalendar = new tc_calendar("date1", true);
 	  $myCalendar->setIcon("calendar/images/iconCalendar.gif");
 	  $myCalendar->setDate(01, 03, 1960);
 	  $myCalendar->setPath("calendar/");
-	  $myCalendar->setYearInterval(1960, 2015);
-	  $myCalendar->dateAllow('1960-01-01', '2015-03-01');
-	  $myCalendar->setSpecificDate(array("2011-04-01", "2011-04-13", "2011-04-25"), 0, 'month');
-	  $myCalendar->setOnChange("myChanged('test')");
+	  $myCalendar->setYearInterval(2013, 2015);
+	  $myCalendar->dateAllow('192013-01-01', '2015-03-01');
 	  $myCalendar->writeScript();
 	  ?>
 </p>
