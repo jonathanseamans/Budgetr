@@ -41,6 +41,7 @@
     return $html;
 }
 echo date_picker("registration"); 
+?>
 </p>
 <br />
 <button onclick="title_submit()">Save</button>
