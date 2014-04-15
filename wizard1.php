@@ -4,15 +4,43 @@
 <br>
 <p> Set the starting date for your budget
 <?php
-	  require_once('calendar/tc_calendar.php');
-	  $myCalendar = new tc_calendar("date1", true);
-	  $myCalendar->setIcon("calendar/images/iconCalendar.gif");
-	  $myCalendar->setDate(01, 03, 1960);
-	  $myCalendar->setPath("calendar/");
-	  $myCalendar->setYearInterval(2013, 2015);
-	  $myCalendar->dateAllow('192013-01-01', '2015-03-01');
-	  $myCalendar->writeScript();
-	  ?>
+	  function date_picker($name, $startyear=NULL, $endyear=NULL)
+{
+    if($startyear==NULL) $startyear = date("Y")-100;
+    if($endyear==NULL) $endyear=date("Y")+50; 
+
+    $months=array('','January','February','March','April','May',
+    'June','July','August', 'September','October','November','December');
+
+    // Month dropdown
+    $html="<select name=\"".$name."month\">";
+
+    for($i=1;$i<=12;$i++)
+    {
+       $html.="<option value='$i'>$months[$i]</option>";
+    }
+    $html.="</select> ";
+   
+    // Day dropdown
+    $html.="<select name=\"".$name."day\">";
+    for($i=1;$i<=31;$i++)
+    {
+       $html.="<option $selected value='$i'>$i</option>";
+    }
+    $html.="</select> ";
+
+    // Year dropdown
+    $html.="<select name=\"".$name."year\">";
+
+    for($i=$startyear;$i<=$endyear;$i++)
+    {      
+      $html.="<option value='$i'>$i</option>";
+    }
+    $html.="</select> ";
+
+    return $html;
+}
+echo date_picker("registration"); 
 </p>
 <br />
 <button onclick="title_submit()">Save</button>
