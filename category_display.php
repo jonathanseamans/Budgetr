@@ -9,17 +9,20 @@
 //	$row = mysql_fetch_assoc($result);
 //	$count=count($row);
 
+	echo "<table border='1'>
+<tr>
+<th>Category</th>
+<th>Amount</th>"
 
-	while ($row = mysql_fetch_assoc($result)) {
-		echo "Category \x20".$row['UDV']."\x20 Current Value \x20".$row['UDV']."<br>";
-	}
 
-//	for ($i=0; $i<12; $i++)
-//	{
-//		echo $row['UDV']."\x20"."<br>";
-//		echo $count."<br>";
-//	}
-//	.$row['UDV']
+	while($row = mysqli_fetch_array($result))
+  	{
+		  echo "<tr>";
+		  echo "<td>" . $row['UDT'] . "</td>";
+		  echo "<td>" . $row['UDV'] . "</td>";
+		  echo "</tr>";
+ 	 }
+	echo "</table>";
 
 	?>
 </div>

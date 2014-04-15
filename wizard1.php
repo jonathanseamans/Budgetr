@@ -1,6 +1,6 @@
 <html>
 <body>
-<p>Enter your the name of your budget: <input type="text" name="Budget Title" value="" id="title"></p>
+<p>Enter the name of your budget: <input type="text" name="Budget Title" value="" id="title"></p>
 <br>
 <p> Set the starting date for your budget
 <?php
