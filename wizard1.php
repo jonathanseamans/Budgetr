@@ -8,7 +8,13 @@
 	echo date_picker("calendar"); 
 ?>
 </p>
-<br />
+<br>
+<p>Select your budget period</p> <select name="periodlength">
+<option value="2week">Every 2 Weeks</option>
+<option value="bimonthly">Bi-Monthly</option>
+<option value="monthly">Monthly</option>
+</select>
+<br>
 <button onclick="title_submit()">Save</button>
 <div id='titleresponse'/>
 </body>
