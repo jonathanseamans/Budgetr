@@ -9,11 +9,11 @@
 ?>
 </p>
 <br>
-<p>Select your budget period</p> <select name="periodlength">
+<p>Select your budget period <select name="periodlength">
 <option value="2week">Every 2 Weeks</option>
 <option value="bimonthly">Bi-Monthly</option>
 <option value="monthly">Monthly</option>
-</select>
+</select></p>
 <br>
 <br>
 <button onclick="title_submit()">Save</button>
