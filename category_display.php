@@ -11,8 +11,8 @@
 
 	echo "<table border='1'>
 <tr>
-<th> Category </th>
-<th> Amount </th>";
+<th>&nbsp;Category&nbsp;</th>
+<th>&nbsp;Amount&nbsp;</th>";
 
 
 	while($row = mysql_fetch_array($result))
