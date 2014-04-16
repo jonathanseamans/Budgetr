@@ -18,8 +18,8 @@
 	while($row = mysql_fetch_array($result))
   	{
 		  echo "<tr>";
-		  echo "<td>" . $row['UDT'] . "</td>";
-		  echo "<td>" . "$" . $row['UDV'] . "</td>";
+		  echo "<td>&nbsp;" . $row['UDT'] . "&nbsp;</td>";
+		  echo "<td>&nbsp;" . "$" . $row['UDV'] . "&nbsp;</td>";
 		  echo "</tr>";
  	 }
 	echo "</table>";
