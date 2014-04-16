@@ -11,15 +11,15 @@
 
 	echo "<table border='1'>
 <tr>
-<th>Category</th>
-<th>Amount</th>";
+<th> Category </th>
+<th> Amount </th>";
 
 
 	while($row = mysql_fetch_array($result))
   	{
 		  echo "<tr>";
-		  echo "<td> " . $row['UDT'] . " </td>";
-		  echo "<td> " . "$" . $row['UDV'] . " </td>";
+		  echo "<td>" . $row['UDT'] . "</td>";
+		  echo "<td>" . "$" . $row['UDV'] . "</td>";
 		  echo "</tr>";
  	 }
 	echo "</table>";
