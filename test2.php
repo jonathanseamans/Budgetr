@@ -1,11 +1,12 @@
-<?php
-//provide your hostname, username and dbname
-include 'mysql.php';
-$book_name = $_POST['book_name'];
-$sql = "select * from budget where uid LIKE '$book_name%'";
-$result = mysql_query($sql);
-while($row=mysql_fetch_array($result))
-{
-echo "<p>".$row['UDT']."</p>";
-}
+<?php 
+
+  include 'mysql.php'
+  $result = mysql_query("SELECT * FROM budget");
+  $array = mysql_fetch_row($result);                          //fetch result    
+
+  //--------------------------------------------------------------------------
+  // 3) echo result as json 
+  //--------------------------------------------------------------------------
+  echo json_encode($array);
+
 ?>
