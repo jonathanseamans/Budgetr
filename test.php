@@ -4,7 +4,6 @@
     <meta charset="utf-8" />
     <title>Simple Modal Dialog</title>
     <link rel="stylesheet" href="jquery/simplemodal.css" type="text/css" media="screen" title="no title" charset="utf-8">
-    <link rel="stylesheet" href="css/main.css" type="text/css" media="screen" title="no title" charset="utf-8">
     <script src="jquery/mootools-core-1.3.1.js" type="text/javascript" charset="utf-8"></script>
     <script src="jquery/mootools-more-1.3.1.1.js" type="text/javascript" charset="utf-8"></script>
     <script src="jquery/simple-modal.js" type="text/javascript" charset="utf-8"></script>
@@ -17,9 +16,10 @@
     <div class="simple-modal-title"></div>
   </div>
   <div class="wrapper">
-    <ul>  
+    <ul>
+  
       <li class="example-item" id="modal-ajax">
-        <button> Ajax Test </button>
+        <img src="assets/images/example-4.jpg" width="196" height="147" alt="Example 4">
         <a href="#">Modal Ajax</a>
       </li>
       
