@@ -3,6 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <title>Simple Modal Dialog</title>
+    <link rel="stylesheet" href="jquery/simplemodal.css" type="text/css" media="screen" title="no title" charset="utf-8">
     <script src="jquery/mootools-core-1.3.1.js" type="text/javascript" charset="utf-8"></script>
     <script src="jquery/mootools-more-1.3.1.1.js" type="text/javascript" charset="utf-8"></script>
     <script src="jquery/simple-modal.js" type="text/javascript" charset="utf-8"></script>
