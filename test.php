@@ -1,66 +1,79 @@
-<?sleep(1)?>
-<style type="text/css" media="screen">
-	.delete-form{
-		
-	}
-	.delete-form label{
-		display:block;
-		font-size:14px;
-		color:#666;
-		margin:8px 0 6px 0;
-	}
-	.delete-form .field-wrapper{
-		background:#DDD;
-		padding:6px;
-		margin:4px 0;
-	}
-	.delete-form .field-wrapper input{
-		width:300px;
-		padding:4px;
-		font-size:16px;
-		color:#666;
-		border:1px solid #AAA;
-	}
-	.delete-form span{
-		font-size:14px;
-		color:#D44;
-	}
-</style>
-  <body>
-  <button onclick="mysql()"> here </button>
-  <!-------------------------------------------------------------------------
-  1) Create some html content that can be accessed by jquery
-  -------------------------------------------------------------------------->
-  <h2> Client example </h2>
-  <h3>Output: </h3>
-  <div id="output">this element will be accessed by jquery and this text replaced</div>
-
-  <script id="source" language="javascript" type="text/javascript">
-
-  $(function mysql () 
-  {
-    //-----------------------------------------------------------------------
-    // 2) Send a http request with AJAX http://api.jquery.com/jQuery.ajax/
-    //-----------------------------------------------------------------------
-    $.ajax({                                      
-      url: 'api.php',                  //the script to call to get data          
-      data: "",                        //you can insert url argumnets here to pass to api.php
-                                       //for example "id=5&parent=6"
-      dataType: 'json',                //data format      
-      success: function(data)          //on recieve of reply
-      {
-        var id = data[0];              //get id
-        var vname = data[1];           //get name
-        //--------------------------------------------------------------------
-        // 3) Update html content
-        //--------------------------------------------------------------------
-        $('#output').html("<b>id: </b>"+id+"<b> name: </b>"+vname); //Set output element html
-        //recommend reading up on jquery selectors they are awesome 
-        // http://api.jquery.com/category/selectors/
-      } 
-    });
-  }); 
-
-  </script>
-  </body>
+<!DOCTYPE html>
+<html>
+<head>
+<script src="jquery/jquery-1.11.0.min.js"></script>
+ 
+<script>
+$(document).ready(function(){
+ 
+	$("#buttonFirstNameLastName").click(function(){
+		$.ajax({url:"test2.php",success:function(result){
+			var obj1 = $.parseJSON(result);
+ 
+			//Populate first name drop down
+			var options = '';
+			for (var i = 0; i < obj1.length; i++) {
+				options += '<option value="' + obj1[i].id + '">' + obj1[i].firstname + '</option>';
+			}
+			$("#firstNameList").html(options);
+ 
+			//Populate last name drop down
+			var options = '';
+			for (var i = 0; i < obj1.length; i++) {
+				options += '<option value="' + obj1[i].id + '">' + obj1[i].lastname + '</option>';
+			}
+			$("#lastNameList").html(options);
+		}});
+	});
+ 
+	$("#buttonEmailTelephone").click(function(){
+		$.ajax({url:"test2.php",success:function(result){
+			var obj2 = $.parseJSON(result);
+ 
+			//Populate first name drop down
+			var options = '';
+			for (var i = 0; i < obj2.length; i++) {
+				options += '<option value="' + obj2[i].id + '">' + obj2[i].email + '</option>';
+			}
+			$("#emailList").html(options);
+ 
+			//Populate last name drop down
+			var options = '';
+			for (var i = 0; i < obj2.length; i++) {
+				options += '<option value="' + obj2[i].id + '">' + obj2[i].telephone + '</option>';
+			}
+			$("#phoneList").html(options);
+		}});
+	});
+ 
+});
+</script>
+</head>
+ 
+<body>
+<div id="div1" ><h2>Populate First Name and Last Name from BACKEND.php w/ JSON data</h2>
+		<button id="buttonFirstNameLastName">Get First Name & Last Name from Backend.PHP</button>
+ 
+ 
+		<h4>Drop down list with First Name</h4>		<select name="fname" id="firstNameList">
+			<option value="place holder">Click the button</option>
+		</select>
+		<select name="lname" id="lastNameList">
+			<option value="place holder">Click the button</option>
+		</select>
+	</div
+ 
+	<div id="div2"><h2>Populate eMail and Telephone from BACKEND.php w/ JSON data </h2>
+		<button id="buttonEmailTelephone">Get eMail & Telephone</button>
+ 
+		<h4>Drop down list with First Name</h4>
+		<select name="emila" id="emailList">
+			<!-- will be populated by backend data -->
+		</select>
+		<select name="phone" id="phoneList">
+			<!-- will be populated by backend data -->
+		</select>
+	</div>
+ 
+</body>
 </html>
