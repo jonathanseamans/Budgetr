@@ -1,4 +1,5 @@
 <div id="content">
+	<style><?php include 'css/budget.css'; ?></style>
 	<?php
 	$uuid = $_SESSION['userid'];
 	$result = mysql_query("SELECT UDT FROM budget WHERE uid = $uuid AND type = 2");
@@ -25,4 +26,6 @@
 	echo "</table>";
 
 	?>
+	<br>
+	<a href="category_setup.php"><button id="add">Add Category</button></a>
 </div>
