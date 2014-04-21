@@ -32,6 +32,7 @@
 			if (xhr.readyState == 4) {
 				if (xhr.status == 200) {
 					document.getElementById("catresponse").innerHTML = xhr.responseText;
+					window.navigate(”userhome.php”);
 				} else {
 					alert('There was a problem with the request.');
 				}
