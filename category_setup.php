@@ -1,5 +1,5 @@
 <html>
-<style><?php include 'css/main.css'; ?></style>
+/*<style><?php include 'css/main.css'; ?></style>*/
 	<?php
 	session_start();
 	?>
@@ -23,7 +23,7 @@
 		} else if (window.ActiveXObject) { // IE 8 and older
 			xhr = new ActiveXObject("Microsoft.XMLHTTP");
 		}
-		var data = "ctitle=" + ctitle;
+		var data = "ctitle=" + ctitle + "&cvalue=" + cvalue;
 		xhr.open("POST", "category_setup2.php", true);
 		xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 		xhr.send(data);
