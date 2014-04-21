@@ -32,7 +32,7 @@
 			if (xhr.readyState == 4) {
 				if (xhr.status == 200) {
 					document.getElementById("catresponse").innerHTML = xhr.responseText;
-					self.location="userhome.php";
+					// self.location="userhome.php";
 				} else {
 					alert('There was a problem with the request.');
 				}
