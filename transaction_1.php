@@ -1,5 +1,5 @@
 <html>
-<style><?php include 'css/main.css'; ?></style>
+
 <?php
 session_start();
 $uuid = $_SESSION['userid'];
