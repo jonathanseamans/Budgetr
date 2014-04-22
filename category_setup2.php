@@ -11,10 +11,10 @@ $num_rows = mysql_num_rows($result);
 
 $row = mysql_fetch_array($result);
 
-print_r($row);
+$numbid = $row['bid'] + 1;
 
-// $sql = "INSERT INTO budget (uid,bid,type,UDT,UDV) VALUES ('$uuid','$num_rows','1','$ctitle','$cvalue')";
-// mysql_query($sql);
+ $sql = "INSERT INTO budget (uid,bid,type,UDT,UDV) VALUES ('$uuid','$num_rows','1','$ctitle','$cvalue')";
+ mysql_query($sql);
 flush();
 echo "Category Saved";
 ?>

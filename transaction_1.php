@@ -1,17 +1,24 @@
 <html>
 <style><?php include 'css/main.css'; ?></style>
-	<?php
-	session_start();
-	?>
-	<body>
-	<p>Enter the name of your Category: <input type="text" name="Category Title" value="" id="ctitle"></p>
-	<br>
-	<p>Enter the amount in this Category per budget period <input type="number" name="Category Title" value=""
-																  id="cvalue"></p>
-	<br>
-	<button onclick="cat_submit()">Save</button>
-	<div id='catresponse'/>
-	</body>
+<?php
+session_start();
+$uuid = $_SESSION['userid'];
+?>
+<body>
+<p>Select the name of your category you wish to add a transaction <select name="element">
+
+			</select>
+<br>
+<p>Adding or Subtracting? <select>
+		<option value="add">Adding</option>
+		<option value="sub">Subtracting</option>
+	</select></p>
+<p>Enter the amount in this Transaction <input type="number" name="Transaction Title" value=""
+															  id="tvalue"></p>
+<br>
+<button onclick="cat_submit()">Save</button>
+<div id='catresponse'/>
+</body>
 </html>
 <script>
 	function cat_submit()
@@ -24,8 +31,8 @@
 		} else if (window.ActiveXObject) { // IE 8 and older
 			xhr = new ActiveXObject("Microsoft.XMLHTTP");
 		}
-		var data = "ctitle=" + ctitle + "&cvalue=" + cvalue;
-		xhr.open("POST", "category_setup2.php", true);
+		var data = "ttitle=" + ctitle + "&tvalue=" + cvalue;
+		xhr.open("POST", "transaction_2.php", true);
 		xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 		xhr.send(data);
 		xhr.onreadystatechange = display_data;
