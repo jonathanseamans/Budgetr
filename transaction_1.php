@@ -5,7 +5,7 @@ session_start();
 $uuid = $_SESSION['userid'];
 ?>
 <body>
-<p>Select the name of your category you wish to add a transaction <select name="element">
+<p>Select the name of your category you wish to add a transaction <select id="ttitle">
 
 			</select>
 <br>
