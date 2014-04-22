@@ -23,8 +23,8 @@ $uuid = $_SESSION['userid'];
 <script>
 	function cat_submit()
 	{
-		var ctitle = document.getElementById("ctitle").value;
-		var cvalue = document.getElementById("cvalue").value;
+		var ttitle = document.getElementById("ttitle").value;
+		var tvalue = document.getElementById("tvalue").value;
 		var xhr;
 		if (window.XMLHttpRequest) { // Mozilla, Safari, ...
 			xhr = new XMLHttpRequest();
