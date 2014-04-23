@@ -1,5 +1,5 @@
 <html>
-
+<style><?php include 'css/main.css'; ?></style>
 <?php
 session_start();
 $uuid = $_SESSION['userid'];
@@ -23,6 +23,7 @@ $uuid = $_SESSION['userid'];
 	</select></p>
 <p>Enter the amount in this Transaction <input type="number" name="Transaction Title" value=""
 															  id="tvalue"></p>
+<p>Enter any notes: <input type="text" name="notes" value="" id="notes"></p>															  
 <br>
 <button onclick="t_submit()">Save</button>
 <div id='tresponse'/>
@@ -34,13 +35,14 @@ $uuid = $_SESSION['userid'];
 		var ttitle = document.getElementById("ttitle").value;
 		var tvalue = document.getElementById("tvalue").value;
 		var math = document.getElementById("math").value;
+		var notes = document.getElementById("notes").value;
 		var xhr;
 		if (window.XMLHttpRequest) { // Mozilla, Safari, ...
 			xhr = new XMLHttpRequest();
 		} else if (window.ActiveXObject) { // IE 8 and older
 			xhr = new ActiveXObject("Microsoft.XMLHTTP");
 		}
-		var data = "ttitle=" + ttitle + "&tvalue=" + tvalue + "&math=" + math;
+		var data = "ttitle=" + ttitle + "&tvalue=" + tvalue + "&math=" + math + "&notes=" + notes;
 		xhr.open("POST", "transaction_2.php", true);
 		xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 		xhr.send(data);

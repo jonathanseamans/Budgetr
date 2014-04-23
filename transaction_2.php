@@ -19,19 +19,17 @@ $sql = "SELECT CUDV FROM budget WHERE uid = '$uuid' AND UDT = '$ttitle'";
 $result = mysql_query($sql);
 $row = mysql_fetch_array($result);
 $currval = $row['CUDV'];
-if ($math = "add") {
+
+if ($math == "add") {
 	$currval = $currval + $tvalue;
 }
 else {
 	$currval = $currval - $tvalue;
 }
-$sql = "INSERT INTO budget (uid,bid,type,UDT,UDV,CUDV,notes) VALUES ('$uuid','$num_rows','3','$ttitle','$tvalue',$currval','$notes')";
-mysql_query($sql);
-$sql = "UPDATE budget SET CUDV = '$currval' WHERE uid = '$uuid' AND type = 2 AND UDT = '$ttitle'";
-mysql_query($sql);
+$sql = "INSERT INTO budget (uid,bid,type,UDT,UDV,CUDV,notes) VALUES ('$uuid','$num_rows','3','$ttitle','$tvalue','$currval','$notes')";
+mysql_query($sql) or die(mysql_error());
+$sql = "UPDATE budget SET CUDV = '$currval' WHERE uid = '$uuid' AND type = 1 AND UDT = '$ttitle'";
+mysql_query($sql) or die(mysql_error());
 flush();
 echo "Transaction Saved";
-// echo $ttitle;
-// echo $tvalue;
-// echo $math;
 ?>
