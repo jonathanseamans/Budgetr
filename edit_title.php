@@ -9,6 +9,7 @@ $uuid = $_SESSION['userid'];
 <?php 
 	include 'mysql.php';
 	$sql = mysql_query("SELECT UDT FROM budget WHERE uid = '$uuid' AND type = 2");
+	$row = mysql_fetch_row($result);
 	print_r($row['UDT']);
 ?>
 <p>Edit Title: <input type="text" name="notes" value="<?php $row['UDT']?>" id="notes"></p>									  
