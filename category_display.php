@@ -5,6 +5,9 @@
 	$result = mysql_query("SELECT UDT FROM budget WHERE uid = $uuid AND type = 2");
 	$row = mysql_fetch_row($result);
 	echo $row[0]."<br>"."<br>";
+	?>
+	<a href="transaction_1.php"><button id="add">Add Transaction</button></a>
+	<?php
 
 	$result = mysql_query("SELECT * FROM budget WHERE uid=$uuid AND type=1");
 //	$row = mysql_fetch_assoc($result);
