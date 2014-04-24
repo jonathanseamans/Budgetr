@@ -5,14 +5,16 @@ session_start();
 $uuid = $_SESSION['userid'];
 ?>
 <body>
-<p> Title </p>
+<h1>
 <?php 
 	include 'mysql.php';
-	$sql = mysql_query("SELECT UDT FROM budget WHERE uid = '$uuid' AND type = 2");
+	$result = mysql_query("SELECT UDT FROM budget WHERE uid = $uuid AND type = 2");
 	$row = mysql_fetch_row($result);
-	print_r($row['UDT']);
-?>
-<p>Edit Title: <input type="text" name="notes" value="<?php $row['UDT']?>" id="notes"></p>									  
+	$title = $row[0];
+	echo $row[0]."<br>";
+	?>
+	</h1>
+<p>Edit Title: <input type="text" name="notes" value="<?= $title ?>" id="notes"></p>									  
 <br>
 <button onclick="title_submit()">Save</button>
 <div id='tresponse'/>

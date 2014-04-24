@@ -1,4 +1,5 @@
 <?php
+session_start();
 include 'mysql.php';
 $notes = $_POST['notes'];
 $uuid = $_SESSION['userid'];
