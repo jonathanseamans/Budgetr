@@ -11,7 +11,7 @@ $uuid = $_SESSION['userid'];
 	$sql = mysql_query("SELECT UDT FROM budget WHERE uid = '$uuid' AND type = 2");
 	print_r($row['UDT']);
 ?>
-<p>Edit Title: <input type="text" name="notes" value="$row['UDT']" id="notes"></p>									  
+<p>Edit Title: <input type="text" name="notes" value="<?php $row['UDT']?>" id="notes"></p>									  
 <br>
 <button onclick="title_submit()">Save</button>
 <div id='tresponse'/>

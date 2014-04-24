@@ -7,6 +7,7 @@
 	echo $row[0]."<br>";
 	?>
 	<a href="edit_title.php"><button id="add">Edit Title</button></a>
+	<br>
 	<?php
 
 	$result = mysql_query("SELECT * FROM budget WHERE uid=$uuid AND type=1");
