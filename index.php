@@ -201,7 +201,7 @@
 <div class="modal fade bs-modal-sm" id="myModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-sm">
     <div class="modal-content">
-      <form class="form-signin" role="form">
+      <form method="post" class="form-signin" role="form" action="<?php $_PHP_SELF ?>">
         <h2 class="form-signin-heading">Please sign in</h2>
         <input name="user_email" type="text" class="form-control" id="user_email" placeholder="Email address" required autofocus>
         <input name="user_password" type="password" class="form-control" id="user_password" placeholder="Password" required>
