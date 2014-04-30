@@ -15,7 +15,6 @@
      	$user_password = test_input($user_password);
 
      	// Validation End
-     	if($errorcount == false) {
 			
 			include 'mysql.php';
 			
@@ -37,7 +36,6 @@
 			else {
 				echo "Wrong Username or Password";				
 			}
-		}
 	}
 
 	function test_input($data)
