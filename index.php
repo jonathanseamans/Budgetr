@@ -5,7 +5,6 @@
 	if($_SESSION['loggedIn'] == true) {
 		header("location:userhome.php");
 	}	
-	if(isset($_POST['add'])) {
 		$user_email = $_POST['user_email'];
 		$user_password = $_POST['user_password'];
 		// Validation Begin
@@ -36,7 +35,6 @@
 			else {
 				echo "Wrong Username or Password";				
 			}
-	}
 
 	function test_input($data)
 		{
