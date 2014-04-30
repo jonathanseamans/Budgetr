@@ -27,6 +27,55 @@
   </head>
 
   <body>
+  <!-- php -->
+  <?php
+	session_start();
+	if($_SESSION['loggedIn'] == true) {
+		header("location:userhome.php");
+	}	
+	if(isset($_POST['add'])) {
+		$user_email = $_POST['user_email'];
+		$user_password = $_POST['user_password'];
+		// Validation Begin
+		
+   		$user_email = test_input($user_email);
+
+     	$user_password = test_input($user_password);
+
+     	// Validation End
+     	if($errorcount == false) {
+			
+			include 'mysql.php';
+			
+			///// MySQL Validation 
+			$sql = "SELECT * FROM user WHERE user_email='$user_email' AND user_password ='$user_password'";
+			$result = mysql_query($sql, $conn);
+			// count rows to make sure its only 1
+			$count=mysql_num_rows($result);
+
+			if($count==1){
+				$user_id = mysql_result($result, 0,'user_id');
+				session_start();
+				$_SESSION['loggedIn'] = true; 
+   				$_SESSION['user'] = $user_email;
+    			$_SESSION['pass'] = $user_password;
+    			$_SESSION['userid'] = $user_id;  
+				header("location:userhome.php");
+			}
+			else {
+				echo "Wrong Username or Password";				
+			}
+		}
+	}
+
+	function test_input($data)
+		{
+	    	$data = trim($data);
+  			$data = stripslashes($data);
+  			$data = htmlspecialchars($data);
+ 			return $data;
+		}
+?>
 
     <!-- Fixed navbar -->
     <div class="navbar navbar-default navbar-fixed-top">
@@ -159,11 +208,9 @@
     <div class="modal-content">
       <form class="form-signin" role="form">
         <h2 class="form-signin-heading">Please sign in</h2>
-        <input type="email" class="form-control" placeholder="Email address" required autofocus>
-        <input type="password" class="form-control" placeholder="Password" required>
-        <label class="checkbox">
-          <input type="checkbox" value="remember-me"> Remember me
-        </label>
+        <input type="email" class="form-control" id="user_email" placeholder="Email address" required autofocus>
+        <input type="password" class="form-control" id="user_password" placeholder="Password" required>
+       
         <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
       </form>
            
