@@ -5,6 +5,8 @@
 	if($_SESSION['loggedIn'] == true) {
 		header("location:userhome.php");
 	}	
+
+	if(isset($_POST['add'])) {
 		$user_email = $_POST['user_email'];
 		$user_password = $_POST['user_password'];
 		// Validation Begin
@@ -15,26 +17,27 @@
 
      	// Validation End
 			
-			include 'mysql.php';
-			
-			///// MySQL Validation 
-			$sql = "SELECT * FROM user WHERE user_email='$user_email' AND user_password ='$user_password'";
-			$result = mysql_query($sql, $conn);
-			// count rows to make sure its only 1
-			$count=mysql_num_rows($result);
+		include 'mysql.php';
+		
+		///// MySQL Validation 
+		$sql = "SELECT * FROM user WHERE user_email='$user_email' AND user_password ='$user_password'";
+		$result = mysql_query($sql, $conn);
+		// count rows to make sure its only 1
+		$count=mysql_num_rows($result);
 
-			if($count==1){
-				$user_id = mysql_result($result, 0,'user_id');
-				session_start();
-				$_SESSION['loggedIn'] = true; 
-   				$_SESSION['user'] = $user_email;
-    			$_SESSION['pass'] = $user_password;
-    			$_SESSION['userid'] = $user_id;  
-				header("location:userhome.php");
-			}
-			else {
-				echo "Wrong Username or Password";				
-			}
+		if($count==1){
+			$user_id = mysql_result($result, 0,'user_id');
+			session_start();
+			$_SESSION['loggedIn'] = true; 
+				$_SESSION['user'] = $user_email;
+			$_SESSION['pass'] = $user_password;
+			$_SESSION['userid'] = $user_id;  
+			header("location:userhome.php");
+		}
+		else {
+			echo "Wrong Username or Password";				
+		}
+	}
 
 	function test_input($data)
 		{
@@ -86,6 +89,9 @@
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
             <li><a href="#signup" data-toggle="modal" data-target=".bs-modal-sm">Login</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#" data-toggle="modal" data-target=".bs-modal-sm">Register</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
