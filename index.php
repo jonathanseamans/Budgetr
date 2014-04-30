@@ -210,18 +210,13 @@
        
         <button name="add" class="btn btn-lg btn-primary btn-block" id="add" type="submit">Sign in</button>
       </form>
-           
-      </div>
-    </div>
-      </div>
-      <div class="modal-footer">
+         <div class="modal-footer">
       <center>
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
         </center>
+      </div>  
       </div>
-	
-      <div>
-      <br>
+    </div>
       </div>
 
     <!-- Bootstrap core JavaScript
