@@ -1,9 +1,15 @@
-<div id="content">
 <style>
 	#content{
 		color: rgb(255,255,255);
 }
+th {
+	color: rgb(255,255,255);
+}
+td {
+	color: rgb(255,255,255);
+}
 </style>
+<div id="content">
 	<?php
 	$uuid = $_SESSION['userid'];
 	$result = mysql_query("SELECT UDT FROM budget WHERE uid = $uuid AND type = 2");
