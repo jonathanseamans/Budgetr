@@ -88,7 +88,7 @@
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#signup">Registration</a></li>
+            <li><a href="#signup" data-toggle="modal" data-target=".zs-modal-sm">Registration</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
             <li><a href="#Login" data-toggle="modal" data-target=".bs-modal-sm">Login</a></li>
@@ -197,6 +197,27 @@
         <input name="user_password" type="password" class="form-control" id="user_password" placeholder="Password" required>
        
         <button name="add" class="btn btn-lg btn-primary btn-block" id="add" type="submit">Sign in</button>
+      </form>
+         <div class="modal-footer">
+      <center>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </center>
+      </div>  
+      </div>
+    </div>
+      </div>
+
+      <!-- Modal 2 -->
+<div class="modal fade zs-modal-sm" id="myModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <form method="post" class="form-reg" role="form" action="<?php $_PHP_SELF ?>">
+        <h2 class="form-reg-heading">Registration is fast and easy</h2>
+        <input name="reg_email" type="text" class="form-control" id="reg_email" placeholder="Email address" required autofocus>
+        <input name="reg_password" type="password" class="form-control" id="reg_password" placeholder="Password" required>
+        <input name="reg_password2" type="password" class="form-control" id="reg_password2" placeholder="Password" required>
+       
+        <button name="add" class="btn btn-lg btn-primary btn-block" id="add" type="submit">Submit</button>
       </form>
          <div class="modal-footer">
       <center>

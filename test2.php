@@ -1,7 +1,4 @@
+//process.php
 <?php
-include 'mysqllocal.php';
-session_start();
-$title_name = $_POST['title_name'];
-$uuid = $_SESSION['userid'];
-echo "Title Saved";
+ print "Form submitted successfully: <br>Your name is <b>".$_POST['name']."</b> and your email is <b>".$_POST['email']."</b><br>";
 ?>
