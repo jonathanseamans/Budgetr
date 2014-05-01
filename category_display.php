@@ -32,7 +32,4 @@
 	echo "</table>";
 
 	?>
-	<br>
-	<a href="category_setup.php"><button id="add">Add Category</button></a>
-	<a href="transaction_1.php"><button id="add">Add Transaction</button></a>
 </div>
