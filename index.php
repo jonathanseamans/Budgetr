@@ -88,10 +88,10 @@
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#signup" data-toggle="modal" data-target=".bs-modal-sm">Login</a></li>
+            <li><a href="#signup">Registration</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#" data-toggle="modal" data-target=".bs-modal-sm">Register</a></li>
+            <li><a href="#Login" data-toggle="modal" data-target=".bs-modal-sm">Login</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
