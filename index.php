@@ -211,13 +211,41 @@
 <div class="modal fade zs-modal-sm" id="myModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-sm">
     <div class="modal-content">
-      <form method="post" class="form-reg" role="form" action="<?php $_PHP_SELF ?>">
+      <form id="form2" method="post" class="form-reg" role="form" action="<?php $_PHP_SELF ?>">
         <h2 class="form-reg-heading">Registration is fast and easy</h2>
         <input name="reg_email" type="text" class="form-control" id="reg_email" placeholder="Email address" required autofocus>
         <input name="reg_password" type="password" class="form-control" id="reg_password" placeholder="Password" required>
         <input name="reg_password2" type="password" class="form-control" id="reg_password2" placeholder="Password" required>
        
         <button name="submit" class="btn btn-default btn-primary" id="submit" type="submit">Submit</button>
+
+          <script>
+		    $(document).ready(function(){
+			$("#submit").click(function(){
+			var email=$('#reg_email').val();
+			var password=$('#reg_password').val();
+			var password2=$('#reg_password2').val();
+
+			$.ajax({
+			type: "POST",
+			url: "test2.php",
+			data: "email="+email+"&password="+password+"&password2="+password2 ,
+			success: function(html){
+			$("#load").css('display','block');
+			$("#form2").css('display','none');
+			$("#box").css('display','none');
+			$("#load").fadeOut('500', function(){
+			$("#load").css('display','none');
+			$("#box").html(html).show('slow');
+			});
+			}
+			});
+			return false;
+
+			});
+			});
+		</script>
+
       </form>
 
 
@@ -243,32 +271,4 @@
     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
   </body>
-
-  <script>
-    $(document).ready(function(){
-	$("#submit").click(function(){
-	var email=$('#reg_email').val();
-	var password=$('#reg_password').val();
-	var password2=$('#reg_password2').val();
-
-	$.ajax({
-	type: "POST",
-	url: "test2.php",
-	data: "email="+email+"&password="+password+"&password2="+password2 ,
-	success: function(html){
-	$("#load").css('display','block');
-	$("#form2").css('display','none');
-	$("#box").css('display','none');
-	$("#load").fadeOut('500', function(){
-	$("#load").css('display','none');
-	$("#box").html(html).show('slow');
-	});
-	}
-	});
-	return false;
-
-	});
-	});
-</script>
-
 </html>
