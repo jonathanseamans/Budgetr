@@ -196,7 +196,7 @@
         <input name="user_email" type="text" class="form-control" id="user_email" placeholder="Email address" required autofocus>
         <input name="user_password" type="password" class="form-control" id="user_password" placeholder="Password" required>
        
-        <button name="add" class="btn btn-default btn-primary" id="add" type="submit">Sign in</button>
+        <button name="add" class="btn btn-default btn-primary" id="add" style="text-align:center" type="submit">Sign in</button>
       </form>
          <div class="modal-footer">
       <center>
@@ -211,13 +211,13 @@
 <div class="modal fade zs-modal-sm" id="myModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-sm">
     <div class="modal-content">
-      <form id="form2" method="post" class="form-reg" role="form" action="<?php $_PHP_SELF ?>">
+      <form id="form2" method="post" class="form-reg" role="form" action="">
         <h2 class="form-reg-heading">Registration is fast and easy</h2>
         <input name="reg_email" type="text" class="form-control" id="reg_email" placeholder="Email address" required autofocus>
         <input name="reg_password" type="password" class="form-control" id="reg_password" placeholder="Password" required>
         <input name="reg_password2" type="password" class="form-control" id="reg_password2" placeholder="Password" required>
        
-        <button name="submit" class="btn btn-default btn-primary" id="submit" type="submit">Submit</button>
+        <button name="submit" class="btn btn-default btn-primary" id="submit" style="text-align:center" type="submit">Submit</button>
 
           <script>
 		    $(document).ready(function(){
