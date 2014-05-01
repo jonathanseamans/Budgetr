@@ -1,6 +1,8 @@
 <div id="content">
 <style>
-	color: rgb(255,255,255);
+	#content{
+		color: rgb(255,255,255);
+}
 </style>
 	<?php
 	$uuid = $_SESSION['userid'];
@@ -8,8 +10,6 @@
 	$row = mysql_fetch_row($result);
 	echo $row[0]."<br>";
 	?>
-	<a href="edit_title.php"><button id="add">Edit Title</button></a>
-	<br>
 	<br>
 	<?php
 

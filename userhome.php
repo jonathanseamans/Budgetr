@@ -22,6 +22,7 @@ body
             <li class="active"><a href="userhome.php">Home</a></li>
             <li><a href="category_setup.php">Categories</a></li>
             <li><a href="transaction_1.php">Transactions</a></li>
+            <li><a href="edit_title.php">Options</a></li>
             <li><a href="logout.php">Logout</a></li>
           </ul>
         </div><!--/.nav-collapse -->
