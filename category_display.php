@@ -1,5 +1,4 @@
 <div id="content">
-	<style><?php include 'css/budget.css'; ?></style>
 	<?php
 	$uuid = $_SESSION['userid'];
 	$result = mysql_query("SELECT UDT FROM budget WHERE uid = $uuid AND type = 2");
