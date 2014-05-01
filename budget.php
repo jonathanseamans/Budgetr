@@ -1,4 +1,10 @@
 <html>
+<style>
+body {
+	padding-top: 50px;
+}
+</style>
+<body>
  <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container">
         <div class="navbar-header">
@@ -40,7 +46,6 @@
 ?>
 </p>
 <br />
-<style><?php include 'css/main.css'; ?></style>
 <p>
 	<?php 
 		if($exist == true) {
@@ -51,4 +56,5 @@
 		    }
 	?>
 </p>
+</body>
 </html>
