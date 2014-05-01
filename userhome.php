@@ -1,4 +1,12 @@
 <html>
+<style>
+body
+{
+    background: url(resources/unnamed.png) ;
+    color: rgb(255,255,255);
+    padding: 50px;
+}
+</style>
  <link href="css/bootstrap.min.css" rel="stylesheet">
  <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container">
