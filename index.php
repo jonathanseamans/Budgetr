@@ -196,7 +196,7 @@
         <input name="user_email" type="text" class="form-control" id="user_email" placeholder="Email address" required autofocus>
         <input name="user_password" type="password" class="form-control" id="user_password" placeholder="Password" required>
        
-        <button name="add" class="btn btn-lg btn-primary btn-block" id="add" type="submit">Sign in</button>
+        <button name="add" class="btn btn-default btn-primary btn-block" id="add" type="submit">Sign in</button>
       </form>
          <div class="modal-footer">
       <center>
@@ -217,7 +217,7 @@
         <input name="reg_password" type="password" class="form-control" id="reg_password" placeholder="Password" required>
         <input name="reg_password2" type="password" class="form-control" id="reg_password2" placeholder="Password" required>
        
-        <button name="submit" class="btn btn-lg btn-primary btn-block" id="submit" type="submit">Submit</button>
+        <button name="submit" class="btn btn-default btn-primary btn-block" id="submit" type="submit">Submit</button>
       </form>
          <div class="modal-footer">
       <center>
