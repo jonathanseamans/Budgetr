@@ -1,4 +1,7 @@
 <div id="content">
+<style>
+	color: rgb(255,255,255);
+</style>
 	<?php
 	$uuid = $_SESSION['userid'];
 	$result = mysql_query("SELECT UDT FROM budget WHERE uid = $uuid AND type = 2");

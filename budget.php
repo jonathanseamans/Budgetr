@@ -1,4 +1,7 @@
 <html>
+<style>
+	color: rgb(255,255,255);
+</style>
 <?php
 	include 'mysql.php';
 	$var = $_SESSION['userid'];		
