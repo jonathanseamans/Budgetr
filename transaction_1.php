@@ -9,7 +9,16 @@ body
 p {
 	color: rgb(255,255,255);
 }
-input {
+#ttitle {
+	color:black;
+}
+#tvalue {
+	color:black;
+}
+#notes {
+	color:black;
+}
+#math {
 	color:black;
 }
 </style>

@@ -9,9 +9,12 @@ body
 p {
 	color: rgb(255,255,255);
 }
-input {
+#ctitle {
 	color:black;
-}
+	}
+#cvalue {
+	color:black;
+	}
 </style>
  <link href="css/bootstrap.min.css" rel="stylesheet">
  <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
