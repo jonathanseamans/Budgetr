@@ -9,12 +9,13 @@
 		#tabs {
 			background-color: rgba(2,2,2,.5);
 			color: rgb(255,255,255);
+			cursor:  pointer;
 		}
 		.table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
  		 background-color: rgb(50,0,0);
 		}
 		#tabs2 {
-			cursor:  pointer;
+			color:white;
 		}
 		</style>
 <div id="content">
