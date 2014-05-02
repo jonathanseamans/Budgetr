@@ -5,7 +5,7 @@
 	#content{
 		color: rgb(255,255,255);
 }
-th {
+table {
 	color: rgb(255,255,255);
 }
 
@@ -24,7 +24,7 @@ th {
 //	$row = mysql_fetch_assoc($result);
 //	$count=count($row);
 
-	echo "<table border='1'>
+	echo "<table class="table table-striped" width="647">
 <tr>
 <th>&nbsp;Category&nbsp;</th>
 <th>&nbsp;Budgeted Amount&nbsp;</th>
