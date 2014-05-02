@@ -16,7 +16,7 @@
 //	$count=count($row);
 	?>
 
-	<table class="table table-striped" width="647">
+	<table class="table table-hover" width="647">
 	<tr>
 	<th>&nbsp;Category&nbsp;</th>
 	<th>&nbsp;Budgeted Amount&nbsp;</th>
