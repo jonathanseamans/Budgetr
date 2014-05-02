@@ -6,6 +6,9 @@ body
     color: rgb(255,255,255);
     padding: 50px;
 }
+p {
+	color: rgb(255,255,255);
+}
 </style>
  <link href="css/bootstrap.min.css" rel="stylesheet">
  <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -32,6 +35,7 @@ body
 	session_start();
 	?>
 	<body>
+	<br>
 	<p>Enter the name of your Category: <input type="text" name="Category Title" value="" id="ctitle"></p>
 	<br>
 	<p>Enter the amount in this Category per budget period <input type="number" name="Category Title" value=""
