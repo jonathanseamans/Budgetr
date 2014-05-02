@@ -24,7 +24,7 @@ th {
 //	$row = mysql_fetch_assoc($result);
 //	$count=count($row);
 
-	echo "<table class="table table-striped" border='1'>
+	echo "<table border='1'>
 <tr>
 <th>&nbsp;Category&nbsp;</th>
 <th>&nbsp;Budgeted Amount&nbsp;</th>
