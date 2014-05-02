@@ -1,6 +1,10 @@
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
 	<script src="assets/js/bootstrap.min.js"></script>
+	<style>
+		#content {
+			background-color: rgba(0,0,0,.5);
+		}
 <div id="content">
 	<?php
 	$uuid = $_SESSION['userid'];
