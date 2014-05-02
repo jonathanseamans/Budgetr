@@ -9,6 +9,9 @@ body
 p {
 	color: rgb(255,255,255);
 }
+input {
+	color:black;
+}
 </style>
  <link href="css/bootstrap.min.css" rel="stylesheet">
  <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
