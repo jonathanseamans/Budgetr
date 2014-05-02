@@ -35,7 +35,7 @@
 	<?php
 	while($row = mysql_fetch_array($result))
   	{
-		  echo "<tr id='tabs2' class='clickableRow' href='#".$row['UDT']."'>";
+		  echo "<tr id='tabs2' class='clickableRow' href='viewtrans.php?t=".$row['UDT']."'>";
 		  echo "<td>&nbsp;" . $row['UDT'] . "&nbsp;</td>";
 		  echo "<td>&nbsp;" . "$" . $row['UDV'] . "&nbsp;</td>";
 		echo "<td>&nbsp;" . "$" . $row['CUDV'] . "&nbsp;</td>";
