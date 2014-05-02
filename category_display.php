@@ -26,7 +26,7 @@
 
 	$result = mysql_query("SELECT * FROM budget WHERE uid=$uuid AND type=1");?>
 
-	<table class="table table-hover" id="tabs" width="400">
+	<table class="table table-hover" id="tabs2" width="400">
 	<tr>
 	<th>&nbsp;Category&nbsp;</th>
 	<th>&nbsp;Budgeted Amount&nbsp;</th>
