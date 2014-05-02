@@ -1,9 +1,23 @@
 @font-face { font-family: Delicious; src: url('/fonts/Delicious-Roman.otf'); }
 @font-face { font-family: Delicious; font-weight: bold; src: url('/fonts/Delicious-Bold.otf'); }
+@font-face { font-family: Maven; src: url('/fonts/MavenProLight-300.otf'); }
+
 
 #logo
 {
     font-family: Delicious, sans-serif;
+    font-size: xx-large;
+    font-weight: bold;
+    display:inline-block;
+    width: 76%;
+    margin: 0 auto;
+    text-align:center;
+
+}
+
+#buttons
+{
+    font-family: Maven, sans-serif;
     font-size: xx-large;
     font-weight: bold;
     display:inline-block;
