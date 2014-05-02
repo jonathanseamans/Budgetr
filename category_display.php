@@ -5,6 +5,7 @@
 		#content {
 			background-color: rgb(0,0,0);
 		}
+		</style>
 <div id="content">
 	<?php
 	$uuid = $_SESSION['userid'];
