@@ -13,9 +13,6 @@
 		.table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
  		 background-color: rgb(50,0,0);
 		}
-		#tabs2 {
-			cursor:  pointer;
-		}
 		</style>
 <div id="content">
 	<?php
@@ -35,7 +32,7 @@
 	<?php
 	while($row = mysql_fetch_array($result))
   	{
-		  echo "<tr id='tabs2' class='clickableRow' href='#".$row['UDT']."'>";
+		  echo "<tr>";
 		  echo "<td>&nbsp;" . $row['UDT'] . "&nbsp;</td>";
 		  echo "<td>&nbsp;" . "$" . $row['UDV'] . "&nbsp;</td>";
 		echo "<td>&nbsp;" . "$" . $row['CUDV'] . "&nbsp;</td>";
@@ -45,10 +42,3 @@
 
 	?>
 </div>
-<script>
-jQuery(document).ready(function($) {
-      $(".clickableRow").click(function() {
-            window.document.location = $(this).attr("href");
-      });
-});
-</script>
