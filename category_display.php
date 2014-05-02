@@ -3,7 +3,7 @@
 	<script src="assets/js/bootstrap.min.js"></script>
 	<style>
 		#content {
-			background-color: rgb(255,255,255);
+			background-color: rgba(255,255,255,.3);
 		}
 		</style>
 <div id="content">
@@ -12,13 +12,8 @@
 	$result = mysql_query("SELECT UDT FROM budget WHERE uid = $uuid AND type = 2");
 	$row = mysql_fetch_row($result);
 	echo $row[0]."<br>";
-	?>
-	<br>
-	<?php
 
 	$result = mysql_query("SELECT * FROM budget WHERE uid=$uuid AND type=1");
-//	$row = mysql_fetch_assoc($result);
-//	$count=count($row);
 	?>
 
 	<table class="table table-hover" width="647">
