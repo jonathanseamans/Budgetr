@@ -3,7 +3,10 @@
 	<script src="assets/js/bootstrap.min.js"></script>
 	<style>
 		#content {
-			background-color: rgba(255,255,255,.3);
+			background-color: rgb(255,255,255);
+		}
+		#tabs {
+			background-color: rgb(255,255,255);
 		}
 		</style>
 <div id="content">
@@ -16,7 +19,7 @@
 	$result = mysql_query("SELECT * FROM budget WHERE uid=$uuid AND type=1");
 	?>
 
-	<table class="table table-hover" width="647">
+	<table class="table table-hover" id="tabs" width="647">
 	<tr>
 	<th>&nbsp;Category&nbsp;</th>
 	<th>&nbsp;Budgeted Amount&nbsp;</th>
