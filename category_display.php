@@ -47,7 +47,6 @@
 	<a class="btn btn-success" href="category_setup.php" data-target="#">Add Category</a>
 	<a class="btn btn-success" href="transaction_1.php" data-target="#">Add Transaction</a>
 </div>
-<br>
 <script>
 jQuery(document).ready(function($) {
       $(".clickableRow").click(function() {
