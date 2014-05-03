@@ -216,9 +216,9 @@
         <input name="reg_email" type="text" class="form-control" id="reg_email" placeholder="Email address" required autofocus>
         <input name="reg_password" type="password" class="form-control" id="reg_password" placeholder="Password" required>
         <input name="reg_password2" type="password" class="form-control" id="reg_password2" placeholder="Password" required>
-       
-        <button name="submit" class="btn btn-default btn-primary" id="submit" style="text-align:center" type="submit">Submit</button>
-
+       <div class="centered"
+	        <button name="submit" class="btn btn-large btn-primary" id="submit" style="text-align:center" type="submit">Submit</button>
+			</div>
           <script>
 		    $(document).ready(function(){
 			$("#submit").click(function(){
