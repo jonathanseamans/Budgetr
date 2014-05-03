@@ -44,7 +44,8 @@
  	 }
 	echo "</table>";
 	?>
-	<a class="btn btn-danger" href="category_setup.php" data-target="#">Add Category</a>
+	<a class="btn btn-success" href="category_setup.php" data-target="#">Add Category</a>
+	 <a class="btn btn-success" href="transaction_1.php" data-target="#">Add Transaction</a>
 </div>
 <script>
 jQuery(document).ready(function($) {
