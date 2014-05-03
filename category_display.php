@@ -43,8 +43,8 @@
 		  echo "</tr>";
  	 }
 	echo "</table>";
-
 	?>
+	<a class="btn btn-danger" href="category_setup.php" data-target="#">Add Category</a>
 </div>
 <script>
 jQuery(document).ready(function($) {
