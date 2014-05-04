@@ -61,9 +61,9 @@ $uuid = $_SESSION['userid'];
 ?>
 </select>
 <br>
-<p>Adding or Subtracting? <select id="math">
-		<option value="add">Adding</option>
-		<option value="sub">Subtracting</option>
+<p>Withdrawing or Depositing? <select id="math">
+		<option value="add">Deposit</option>
+		<option value="sub">Withdrawal</option>
 	</select></p>
 <p>Enter the amount in this Transaction <input type="number" name="Transaction Title" value=""
 															  id="tvalue"></p>
