@@ -88,7 +88,7 @@
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#signup" data-toggle="modal" data-target=".zs-modal-sm">Registration</a></li>
+            <li><a href="register.php" data-toggle="modal" data-target="#myModal">Registration</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
             <li><a href="#Login" data-toggle="modal" data-target=".bs-modal-sm">Login</a></li>
@@ -208,62 +208,16 @@
       </div>
 
       <!-- Modal 2 -->
-<div class="modal fade zs-modal-sm" id="myModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-sm">
+ <!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<!-- Modal content comes from the page in the href -->
+<div class="modal-dialog">
     <div class="modal-content">
-      <form id="form2" method="post" class="form-reg" role="form" action="">
-        <h2 class="form-reg-heading">Registration is fast and easy</h2>
-        <input name="reg_email" type="text" class="form-control" id="reg_email" placeholder="Email address" required autofocus>
-        <input name="reg_password" type="password" class="form-control" id="reg_password" placeholder="Password" required>
-        <input name="reg_password2" type="password" class="form-control" id="reg_password2" placeholder="Password" required>
-       <div class="centered"
-	        <button name="submit" class="btn btn-large btn-primary" id="submit" style="text-align:center" type="submit">Submit</button>
-			</div>
-          <script>
-		    $(document).ready(function(){
-			$("#submit").click(function(){
-			var email=$('#reg_email').val();
-			var password=$('#reg_password').val();
-			var password2=$('#reg_password2').val();
 
-			$.ajax({
-			type: "POST",
-			url: "test2.php",
-			data: "email="+email+"&password="+password+"&password2="+password2 ,
-			success: function(html){
-			$("#load").css('display','block');
-			$("#form2").css('display','none');
-			$("#box").css('display','none');
-			$("#load").fadeOut('500', function(){
-			$("#load").css('display','none');
-			$("#box").html(html).show('slow');
-			});
-			}
-			});
-			return false;
+    </div>         <!-- /modal-content -->
+</div>     <!-- /modal-dialog -->
 
-			});
-			});
-		</script>
-
-      </form>
-
-
-      	<div id="load" style="">
-		</div>
-		<div id="box">
-		</div>
-
-
-
-         <div class="modal-footer">
-	      	<center>
-	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-	        </center>
-      	</div>  
-      </div>
-    </div>
-</div>
+</div><!-- /.modal -->
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
