@@ -1,5 +1,8 @@
-<!doctype html>
-<html lang="en">
+<div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+             <h4 class="modal-title">Title</h4>
+        </div>            <!-- /modal-header -->
+          <div class="modal-body">
 <?php
 	if(isset($_POST['add'])) {
 
@@ -72,8 +75,6 @@
  			return $data;
 		}
 ?>
-<style><?php include 'css/main.css'; ?></style>
-<body>
 	<div> 
 		<form method="post" action="<?php $_PHP_SELF ?>">
 		<table width="400" border="0" cellspacing="1" cellpadding="2">
@@ -106,5 +107,7 @@
 		</table>
 		</form>
 	</div>
-</body>
-</html>
+ </div><!-- /modal-body -->
+        <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+        </div>            <!-- /modal-footer -->
