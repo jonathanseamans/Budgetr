@@ -1,18 +1,18 @@
 <?php
-	
-			// Validation End
-include 'mysql.php';
-
-$user_email = $_POST['user_email'];
-$user_password = $_POST['user_password'];
 
 include 'mysql.php';
-	
-				///// MySQL Validation 
+
+$user_email = $_POST['reg_email'];
+$user_password = $_POST['reg_password'];
+
+include 'mysql.php';	
+///// MySQL Validation
+ 
 $sql    = "SELECT * FROM user WHERE user_email='$user_email'";
 $retval = mysql_query($sql);
+
 				
-if(! $retval) {
+if(mysql_num_rows($retval) === 0) {
 	
 	$sql = "INSERT INTO user ".
 				"(user_id,user_email, user_password) ".
@@ -24,6 +24,6 @@ if(! $retval) {
 	echo "Account Registered successfully\n";
 }
 else {
-		echo "Email Address is already in Use";
+		echo "Email Already in Use, please choose another";
 }
 ?>
