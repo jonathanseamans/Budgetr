@@ -21,7 +21,7 @@ if(mysql_num_rows($retval) === 0) {
 	if(! $retval ) {
 		die('Could not enter data: ' . mysql_error());
 	}
-	echo "Account Registered successfully\n";
+	echo "Account Registered Successfully, you may now login.";
 }
 else {
 		echo "Email Already in Use, please choose another";
