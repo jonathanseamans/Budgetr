@@ -22,11 +22,13 @@ $currval = $row['CUDV'];
 
 if ($math == "add") {
 	$currval = $currval + $tvalue;
+	$math = "Deposit";
 }
 else {
 	$currval = $currval - $tvalue;
+	$math = 'Withdrawal';
 }
-$sql = "INSERT INTO budget (uid,bid,type,UDT,UDV,CUDV,notes) VALUES ('$uuid','$num_rows','3','$ttitle','$tvalue','$currval','$notes')";
+$sql = "INSERT INTO budget (uid,bid,type,trans,UDT,UDV,CUDV,notes) VALUES ('$uuid','$num_rows','3','$math','$ttitle','$tvalue','$currval','$notes')";
 mysql_query($sql) or die(mysql_error());
 $sql = "UPDATE budget SET CUDV = '$currval' WHERE uid = '$uuid' AND type = 1 AND UDT = '$ttitle'";
 mysql_query($sql) or die(mysql_error());
