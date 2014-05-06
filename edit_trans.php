@@ -19,6 +19,9 @@
 		    color: rgb(255,255,255);
 		    padding: 50px;
 		}
+		#editable {
+			color:black;
+		}
 		</style>
 <html>
  <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -59,7 +62,7 @@ if($_SESSION['loggedIn'] == false) {
 
 	echo '<center> <B> <font size="5">'."Edit Transaction";
 
-	$result = mysql_query("SELECT * FROM budget WHERE uid = $uuid AND UDT = '$title' AND type=3 AND bid = $bid");
+	$result = mysql_query("SELECT * FROM budget WHERE uid = $uuid AND UDT = '$title' AND type=3 AND bid = $bid LIMIT 1");
 	?>
 
 	<table class="table table-hover" id="tabs" width="400">
@@ -71,10 +74,20 @@ if($_SESSION['loggedIn'] == false) {
 	<?php
 	while($row = mysql_fetch_array($result))
   	{
-		  echo "<tr>";
+  		if($row['trans'] == "Deposit") {
+  			$optrans = "Withdrawal";
+  		}
+  		else {
+  			$optrans = 'Deposit';
+  		}
+  		  echo $row['trans'];
+  		  echo $optrans;
+		  echo "<tr id='editable'>";
 		  echo "<td><input placeholder='" . $row['timestamp'] . "'></input></td>";
-		  echo "<td><input placeholder='". $row['UDV'] . "'></input></td>";
-		echo "<input placeholder='". $row['notes'] . "'></input></td>";
+		  echo "<td><input placeholder='$ ". $row['UDV'] . "'></input></td>";
+		  echo "<td><select><option value='". $row['trans'] . "'>".$row['trans']."</option>";
+		  echo "<option value='". $optrans . "'>".$optrans."</option></select></td>";
+		  echo "<td><input placeholder='". $row['notes'] . "'></input></td>";
 		  echo "</tr>";
  	 }
 	echo "</table>";
@@ -86,6 +99,7 @@ if($_SESSION['loggedIn'] == false) {
 	color: black;
 }
 </style>
+<button type="button" class="btn btn-success" data-dismiss="modal">Save Transaction</button>
 <a class="btn btn-danger" data-toggle="modal" data-target="#confirm-delete">Delete Transaction</a>
 <div class="modal fade" id="confirm-delete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
@@ -98,7 +112,7 @@ if($_SESSION['loggedIn'] == false) {
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-                <a href="deletetrans.php?t=<?php echo $title;?>" class="btn btn-danger danger">Delete</a>
+                <a href="deletetrans.php?t=<?php echo $title;?>&b=<?php echo $bid" class="btn btn-danger danger">Delete</a>
             </div>
         </div>
     </div>

@@ -61,7 +61,7 @@ if($_SESSION['loggedIn'] == false) {
 	$result = mysql_query("SELECT * FROM budget WHERE uid = $uuid AND UDT = '$title' AND type=3");
 	?>
 
-	<table class="table table-hover" id="tabs" width="400">
+	<table class="table table-hover" id="tabs2" width="400">
 	<tr>
 	<th>&nbsp;Date&nbsp;</th>
 	<th>&nbsp;Amount&nbsp;</th>
@@ -70,7 +70,7 @@ if($_SESSION['loggedIn'] == false) {
 	<?php
 	while($row = mysql_fetch_array($result))
   	{
-		  echo "<tr id='tabs' class='clickableRow' href='edit_trans.php?t=".$row['UDT']."b=".$row['bid']."'>";
+		  echo "<tr id='tabs' class='clickableRow' href='edit_trans.php?t=".$row['UDT']."&b=".$row['bid']."'>";
 		  echo "<td>&nbsp;" . $row['timestamp'] . "&nbsp;</td>";
 		  echo "<td>&nbsp;" . "$" . $row['UDV'] . "&nbsp;</td>";
 		echo "<td>&nbsp;" . $row['notes'] . "&nbsp;</td>";
@@ -102,6 +102,13 @@ if($_SESSION['loggedIn'] == false) {
         </div>
     </div>
 </div>
+<script>
+jQuery(document).ready(function($) {
+      $(".clickableRow").click(function() {
+            window.document.location = $(this).attr("href");
+      });
+});
+</script>
 </body>
 </html>
 <script>
