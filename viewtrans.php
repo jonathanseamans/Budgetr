@@ -88,7 +88,7 @@ if($_SESSION['loggedIn'] == false) {
 }
 </style>
 <a href="transaction_1.php"><button type="button" class="btn btn-success" href="transaction_1.php">Add Transaction</button>
-<a href="edit_cat.php"><button type="button" class="btn btn-success" data-dismiss="modal">Edit Category</button>
+<a href="edit_cat.php?t=<?php echo $title ?>"><button type="button" class="btn btn-success" data-dismiss="modal">Edit Category</button>
 <a class="btn btn-danger" data-toggle="modal" data-target="#confirm-delete">Delete Category</a>
 <div class="modal fade" id="confirm-delete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
