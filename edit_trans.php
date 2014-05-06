@@ -68,6 +68,7 @@ if($_SESSION['loggedIn'] == false) {
 	<table class="table table-hover" id="tabs" width="400">
 	<tr>
 	<th>&nbsp;Date&nbsp;</th>
+	<th>&nbsp;Type&nbsp;</th>
 	<th>&nbsp;Amount&nbsp;</th>
 	<th>&nbsp;Notes&nbsp;</th>
 
@@ -83,9 +84,9 @@ if($_SESSION['loggedIn'] == false) {
   		  echo $row['trans'];
   		  echo $optrans;
 		  echo "<tr id='editable'>";
-		  echo "<td><input placeholder='" . $row['timestamp'] . "'></input></td>";
-		  echo "<td><input placeholder='$ ". $row['UDV'] . "'></input></td>";
-		  echo "<td><select><option value='". $row['trans'] . "'>".$row['trans']."</option>";
+		  echo "<td width='150'><input placeholder='" . $row['timestamp'] . "'></input></td>";
+		  echo "<td width='150'><input placeholder='$ ". $row['UDV'] . "'></input></td>";
+		  echo "<td width='150'><select><option value='". $row['trans'] . "'>".$row['trans']."</option>";
 		  echo "<option value='". $optrans . "'>".$optrans."</option></select></td>";
 		  echo "<td><input placeholder='". $row['notes'] . "'></input></td>";
 		  echo "</tr>";
@@ -108,11 +109,11 @@ if($_SESSION['loggedIn'] == false) {
                 Delete <?php echo $title; ?>
             </div>
             <div class="modal-body">
-                <p>Are you sure you want to delete this category?</p>
+                <p>Are you sure you want to delete this transaction?</p>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-                <a href="deletetrans.php?t=<?php echo $title;?>&b=<?php echo $bid" class="btn btn-danger danger">Delete</a>
+                <a href="deletetrans.php?t=<?php echo $title;?>&b=<?php echo $bid?>" class="btn btn-danger danger">Delete</a>
             </div>
         </div>
     </div>
