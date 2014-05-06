@@ -53,12 +53,13 @@ if($_SESSION['loggedIn'] == false) {
 <div id="content">
 	<?php
 	$title = $_GET['t'];
+	$bid = $_GET['b'];
 	include 'mysql.php';
 	$uuid = $_SESSION['userid'];
 
-	echo '<center> <B> <font size="5">'."Transactions for ".$title;
+	echo '<center> <B> <font size="5">'."Edit Transaction";
 
-	$result = mysql_query("SELECT * FROM budget WHERE uid = $uuid AND UDT = '$title' AND type=3");
+	$result = mysql_query("SELECT * FROM budget WHERE uid = $uuid AND UDT = '$title' AND type=3 AND bid = $bid");
 	?>
 
 	<table class="table table-hover" id="tabs" width="400">
@@ -70,10 +71,10 @@ if($_SESSION['loggedIn'] == false) {
 	<?php
 	while($row = mysql_fetch_array($result))
   	{
-		  echo "<tr id='tabs' class='clickableRow' href='edit_trans.php?t=".$row['UDT']."b=".$row['bid']."'>";
-		  echo "<td>&nbsp;" . $row['timestamp'] . "&nbsp;</td>";
-		  echo "<td>&nbsp;" . "$" . $row['UDV'] . "&nbsp;</td>";
-		echo "<td>&nbsp;" . $row['notes'] . "&nbsp;</td>";
+		  echo "<tr>";
+		  echo "<td><input placeholder='" . $row['timestamp'] . "'></input></td>";
+		  echo "<td><input placeholder='". $row['UDV'] . "'></input></td>";
+		echo "<input placeholder='". $row['notes'] . "'></input></td>";
 		  echo "</tr>";
  	 }
 	echo "</table>";
@@ -85,7 +86,7 @@ if($_SESSION['loggedIn'] == false) {
 	color: black;
 }
 </style>
-<a class="btn btn-danger" data-toggle="modal" data-target="#confirm-delete">Delete Category</a>
+<a class="btn btn-danger" data-toggle="modal" data-target="#confirm-delete">Delete Transaction</a>
 <div class="modal fade" id="confirm-delete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -97,7 +98,7 @@ if($_SESSION['loggedIn'] == false) {
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-                <a href="deletecat.php?t=<?php echo $title;?>" class="btn btn-danger danger">Delete</a>
+                <a href="deletetrans.php?t=<?php echo $title;?>" class="btn btn-danger danger">Delete</a>
             </div>
         </div>
     </div>
