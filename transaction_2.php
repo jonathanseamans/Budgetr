@@ -7,7 +7,7 @@ $math = $_POST['math'];
 $notes = $_POST['notes'];
 $uuid = $_SESSION['userid'];
 
-$sql = "SELECT bid FROM budget WHERE uid = '$uuid' ORDER BY bid DESC";
+$sql = "SELECT bid FROM budget WHERE uid = '$uuid' AND UDT = '$ttitle' ORDER BY bid DESC";
 $result = mysql_query($sql);
 $num_rows = mysql_num_rows($result);
 

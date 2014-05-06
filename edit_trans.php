@@ -68,8 +68,8 @@ if($_SESSION['loggedIn'] == false) {
 	<table class="table table-hover" id="tabs" width="400">
 	<tr>
 	<th>&nbsp;Date&nbsp;</th>
-	<th>&nbsp;Type&nbsp;</th>
 	<th>&nbsp;Amount&nbsp;</th>
+	<th>&nbsp;Type&nbsp;</th>
 	<th>&nbsp;Notes&nbsp;</th>
 
 	<?php
@@ -81,26 +81,29 @@ if($_SESSION['loggedIn'] == false) {
   		else {
   			$optrans = 'Deposit';
   		}
-  		  echo $row['trans'];
-  		  echo $optrans;
+
+  		  echo "<form method='POST' action='edit_trans2.php'>";
 		  echo "<tr id='editable'>";
-		  echo "<td width='150'><input placeholder='" . $row['timestamp'] . "'></input></td>";
-		  echo "<td width='150'><input placeholder='$ ". $row['UDV'] . "'></input></td>";
-		  echo "<td width='150'><select><option value='". $row['trans'] . "'>".$row['trans']."</option>";
+		  echo "<td width='150'><input name='timestamp' value='".$row['timestamp']."'></input></td>";
+		  echo "<td width='150'><input name='udv' value='". $row['UDV'] . "'></input></td>";
+		  echo "<td width='150'><select name='trans'><option value='". $row['trans'] . "'>".$row['trans']."</option>";
 		  echo "<option value='". $optrans . "'>".$optrans."</option></select></td>";
-		  echo "<td><input placeholder='". $row['notes'] . "'></input></td>";
+		  echo "<td><input name='notes' value='". $row['notes'] . "'></input></td>";
 		  echo "</tr>";
  	 }
 	echo "</table>";
 
 	?>
+	<input type="hidden" id="title" name="ti" value="<?php echo $title; ?>">
+    <input type="hidden" id="bid" name="bi" value="<?php echo $bid; ?>">
 </div>
 <style>
 #confirm-delete {
 	color: black;
 }
 </style>
-<button type="button" class="btn btn-success" data-dismiss="modal">Save Transaction</button>
+<button type="submit" class="btn btn-success">Save Transaction</button>
+</form>
 <a class="btn btn-danger" data-toggle="modal" data-target="#confirm-delete">Delete Transaction</a>
 <div class="modal fade" id="confirm-delete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
