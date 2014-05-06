@@ -38,8 +38,8 @@
   	{
 		  echo "<tr id='tabs' class='clickableRow' href='viewtrans.php?t=".$row['UDT']."'>";
 		  echo "<td>&nbsp;" . $row['UDT'] . "&nbsp;</td>";
-		  echo "<td>&nbsp;" . "$" . $row['UDV'] . "&nbsp;</td>";
-		echo "<td>&nbsp;" . "$" . $row['CUDV'] . "&nbsp;</td>";
+		  echo "<td>&nbsp;" . "$ " . $row['UDV'] . "&nbsp;</td>";
+		echo "<td>&nbsp;" . "$ " . $row['CUDV'] . "&nbsp;</td>";
 		  echo "</tr>";
  	 }
 	echo "</table>";
