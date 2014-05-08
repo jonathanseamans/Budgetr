@@ -1,32 +1,40 @@
-<!DOCTYPE html>
-<html>
-<style>
-</style>
-  <head>
-    <title>Bootstrap version 3.1 Modal with remote content</title>
- 
-    <!-- Bootstrap core CSS -->
-  <link href="css/bootstrap.min.css" rel="stylesheet">
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"></script>
-      <script src="http://cdnjs.cloudflare.com/ajax/libs/respond.js/1.2.0/respond.js"></script>
-    <![endif]-->
-  </head>
-  <body>
-<a data-toggle="modal" class="btn btn-info" href="register.php" data-target="#myModal">Click me !</a>
- <!-- Modal -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-<!-- Modal content comes from the page in the href -->
-<div class="modal-dialog">
-    <div class="modal-content">
+<?php
+/*
+ Tagline: Less is more
+ Tags: basic, validation, http status
+ Requires: PHP >= 5.3
+ Description: Shows the bare minimum code needed to get your RESTful api server
+ up and running
 
-    </div>         <!-- /modal-content -->
-</div>     <!-- /modal-dialog -->
+ Example 1: GET math/add returns 2
+ Example 2: GET math/add?n1=6&n2=4 returns 10
+ Example 3: GET math/multiply/4/3 returns {"result":12}
+ Example 4: GET math/multiply/4/NaN returns
+{
+  "error": {
+    "code": 400,
+    "message": "Bad Request: invalid value specified for n2"
+  }
+}
+Example 5: GET math/sum/1/2/3/4/5 returns 15
 
-</div><!-- /.modal -->
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-  </body>
-</html>
+Content:
+
+> **Note:-**
+>
+> 1. Take note of the php doc comments, they make sure the data is sent in the
+>    right type and validated automatically before calling the api method.
+> 2. Sum method accepts variable number of parameters with the help of
+>    wildcard manual route. Read the [Routes](../_006_routing/readme.html)
+>    example for better understanding
+
+ */
+
+require_once 'restler.php';
+//smart auto loader helps loading a namespaced class with just the name part
+use Luracast\Restler\Restler;
+
+$r = new Restler();
+$r->addAPIClass('Math');
+$r->handle();
+
