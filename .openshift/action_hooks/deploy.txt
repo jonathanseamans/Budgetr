@@ -1,0 +1,1 @@
+touch /var/lib/openshift/5340949e5973ca9987000307/php/configuration/etc/conf/test.txt
