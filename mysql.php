@@ -2,10 +2,10 @@
 	$dbhost = $_ENV['OPENSHIFT_MYSQL_DB_HOST'] . ':' . $_ENV['OPENSHIFT_MYSQL_DB_PORT'];
 	$dbuser = $_ENV['OPENSHIFT_MYSQL_DB_USERNAME'];
 	$dbpass = $_ENV['OPENSHIFT_MYSQL_DB_PASSWORD'];
-	$conn = mysql_connect($dbhost, $dbuser, $dbpass);
-	mysql_select_db('test_db');
+	$database = "test_db";
+	$conn = mysqli_connect($dbhost, $dbuser, $dbpass,$database);
 			
-	if(! $conn )
-	{
-	  die('Unable to Connect to Server' . mysql_error());
-	} 
+	if ($mysqli->connect_error) {
+    die('Connect Error (' . $mysqli->connect_errno . ') '
+            . $mysqli->connect_error);
+}

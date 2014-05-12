@@ -20,13 +20,18 @@
 		include 'mysql.php';
 		
 		///// MySQL Validation 
-		$sql = "SELECT * FROM user WHERE user_email='$user_email' AND user_password ='$user_password'";
-		$result = mysql_query($sql, $conn);
+		$stmt = $mysqli->stmt_init();
+		$stmt->prepare("SELECT * FROM user WHERE user_email=? AND user_password =?"));
+		$stmt->bind_param("ss", $user_email,$user_password);
+
+		$stmt->execute();
+        $result = $stmt->get_result();
 		// count rows to make sure its only 1
-		$count=mysql_num_rows($result);
+		$count = mysqli_num_rows($result);
 
 		if($count==1){
-			$user_id = mysql_result($result, 0,'user_id');
+			$user_id = $result->fetch_assoc()['user_id'];
+			mysqli_resul
 			session_start();
 			$_SESSION['loggedIn'] = true; 
 				$_SESSION['user'] = $user_email;
