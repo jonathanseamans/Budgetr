@@ -31,7 +31,6 @@
 
 		if($count==1){
 			$user_id = $result->fetch_assoc()['user_id'];
-			mysqli_resul
 			session_start();
 			$_SESSION['loggedIn'] = true; 
 				$_SESSION['user'] = $user_email;
