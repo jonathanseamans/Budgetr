@@ -9,25 +9,19 @@
 	if(isset($_POST['add'])) {
 		$user_email = $_POST['user_email'];
 		$user_password = $_POST['user_password'];
-		// Validation Begin
-		
-   		$user_email = test_input($user_email);
-
-     	$user_password = test_input($user_password);
-
-     	// Validation End
-			
-		include 'mysql.php';
+	
+		include 'mysql2.php';
 		
 		///// MySQL Validation 
-		$stmt = $mysqli->stmt_init();
-		$stmt->prepare("SELECT * FROM user WHERE user_email=? AND user_password =?"));
-		$stmt->bind_param("ss", $user_email,$user_password);
+		if ($stmt = mysqli_prepare($con,"SELECT * FROM user WHERE user_email=? AND user_password=?")) {
 
-		$stmt->execute();
-        $result = $stmt->get_result();
-		// count rows to make sure its only 1
-		$count = mysqli_num_rows($result);
+		 mysqli_stmt_bind_param($stmt, "ss", $user_email, $user_password);
+
+		 mysqli_stmt_execute($stmt);
+ 		 $result = $stmt->get_result();
+		// // count rows to make sure its only 1
+		 $count = mysqli_num_rows($result);
+		}
 
 		if($count==1){
 			$user_id = $result->fetch_assoc()['user_id'];
@@ -42,14 +36,6 @@
 			echo "Wrong Username or Password";				
 		}
 	}
-
-	function test_input($data)
-		{
-	    	$data = trim($data);
-  			$data = stripslashes($data);
-  			$data = htmlspecialchars($data);
- 			return $data;
-		}
 ?>
   <head>
     <meta charset="utf-8">
