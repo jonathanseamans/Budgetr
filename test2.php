@@ -15,7 +15,7 @@ class Math
     /**
      * @param int $n1 {@from path}
      * @param int $n2 {@from path}
-     *
+     * test2
      * @return array
      */
     function multiply($n1, $n2)
