@@ -31,10 +31,9 @@ Content:
  */
 
 require_once 'restler.php';
-//smart auto loader helps loading a namespaced class with just the name part
+//smart auto lsoader helps loading a namespaced class with just the name part
 use Luracast\Restler\Restler;
 
 $r = new Restler();
 $r->addAPIClass('Math');
 $r->handle();
-
