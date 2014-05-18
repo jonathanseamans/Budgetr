@@ -23,7 +23,7 @@ Content:
 > **Note:-**
 >
 > 1. Take note of the php doc comments, they make sure the data is sent in the
->    right type and validated automatically before calling the api method.
+>    rightasdasdasdasdasdasdtype and validated automatically before calling the api method.
 > 2. Sum method accepts variable number of parameters with the help of
 >    wildcard manual route. Read the [Routes](../_006_routing/readme.html)
 >    example for better understanding
