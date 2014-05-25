@@ -91,8 +91,8 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-6">
-					<h1>Make your landing page<br/>
-					look really good.</h1>
+					<h1>The simple<br/>
+					budgeting app.</h1>
 					<form class="form-inline" role="form">
 					  <div class="form-group">
 					    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter your email address">
@@ -112,29 +112,29 @@
 	<div class="container">
 		<div class="row mt centered">
 			<div class="col-lg-6 col-lg-offset-3">
-				<h1>Your Landing Page<br/>Looks Wonderful Now.</h1>
-				<h3>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</h3>
+				<h1>Simplify your finances.</h1>
+				<h3>No uncompromising rules to memorize.  No convoluted systems to figure out.  Budgetr's flexibility means you can make your budget as simple or complex as you want.</h3>
 			</div>
 		</div><!-- /row -->
 		
 		<div class="row mt centered">
 			<div class="col-lg-4">
-				<img src="assets/img/ser01.png" width="180" alt="">
-				<h4>1 - Browser Compatibility</h4>
-				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever.</p>
+				<img src="assets/img/budget_cr.png" width="180" alt="">
+				<h4>1 - Define Your Categories</h4>
+				<p>Whether you want to create categories based around your bank accounts or your spending habits, Budgetr gives you complete control of your budget's layout.</p>
 			</div><!--/col-lg-4 -->
 
 			<div class="col-lg-4">
-				<img src="assets/img/ser02.png" width="180" alt="">
-				<h4>2 - Email Campaigns</h4>
-				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever.</p>
+				<img src="assets/img/transaction_cr.png" width="180" alt="">
+				<h4>2 - Tag Your Transactions</h4>
+				<p>Searchable notes allow you to make tracking your transactions as simple or granular as you need.  Create tags based on stores, payment methods, purchase types, etc.  Your options are limitless.</p>
 
 			</div><!--/col-lg-4 -->
 
 			<div class="col-lg-4">
 				<img src="assets/img/ser03.png" width="180" alt="">
-				<h4>3 - Gather Your Notes</h4>
-				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever.</p>
+				<h4>3 - Achieve Budgeting Accuracy And Awareness</h4>
+				<p>The problem with budgeting solutions that promise to automatically update individual account information is that no system is able to categorize your purchases, withdrawals, etc. with 100% accuracy.  Plus, relying on your budgeting software to automatically pull this information makes it easy to pay less attention to your finances, which can lead to greater debt.</p>
 
 			</div><!--/col-lg-4 -->
 		</div><!-- /row -->
@@ -143,8 +143,9 @@
 	<div class="container">
 		<div class="row mt centered">
 			<div class="col-lg-6 col-lg-offset-3">
-				<h1>Budgetr is for Everyone.</h1>
-				<h3>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</h3>
+				<h1>Platform agnostic.<br/>
+				Budgetr is there when you need it.</h1>
+				<h3>Whether you use a Mac or PC, iPhone or Android (or switch among them frequently), Budgetr is accessible from any device that has an internet connection.</h3>
 			</div>
 		</div><!-- /row -->
 	
